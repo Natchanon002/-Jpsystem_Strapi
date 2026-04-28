@@ -240,6 +240,41 @@ export const translations = {
           map: "Map placeholder",
         },
       },
+      invoiceReceipt: {
+        metaTitle: "Invoice & e-Receipt",
+        title: "Invoice & e-Receipt",
+        heroSubtitle:
+          "Digital invoicing and receipts—streamlined for compliance, speed, and trust.",
+        painTitle: "Pain Points",
+        painItems: [
+          "Too many documents to sign",
+          "Sometimes I have to go to the office just for one document",
+          "The time to sign has become a burden on my work",
+          "Get tired when signing",
+          "Very troublesome because it is a sign of many",
+        ],
+        solutionTitle: "Comprehensive Invoice & e-Receipt Support",
+        solutionDesc:
+          "Japan System supports Invoice & e-Receipt—one of the nine DX measures promoted by the Thai Revenue Service.",
+        blocks: {
+          eTax: {
+            title: "What is e-Tax Invoice & e-Receipt",
+            desc: "Digitize invoice/receipt issuance, storage, and retrieval to reduce paper, speed up workflows, and improve audit readiness.",
+          },
+          signature: {
+            title: "What is Digital Signature",
+            desc: "A secure signing method that verifies identity and protects integrity—reducing risk while enabling remote approvals.",
+          },
+        },
+        compareTitle: "COST REDUCTION EXAMPLE BY INTRODUCING E-TAX",
+        compareSubtitle: "Current Process vs. With Japan System e‑Tax",
+        metrics: [
+          { k: "Time saved", current: 25, withSystem: 75 },
+          { k: "Paper cost reduction", current: 15, withSystem: 70 },
+          { k: "Security enhancement", current: 35, withSystem: 85 },
+        ],
+        cta: { primary: "Contact us", secondary: "See e‑Tax detail" },
+      },
 
     },
   },
@@ -473,6 +508,41 @@ export const translations = {
           map: "ตัวอย่างแผนที่",
         },
       },
+      invoiceReceipt: {
+        metaTitle: "Invoice & e-Receipt",
+        title: "Invoice & e-Receipt",
+        heroSubtitle:
+          "ใบแจ้งหนี้และใบเสร็จดิจิทัล—เพื่อความเร็ว ความน่าเชื่อถือ และความสอดคล้องตามข้อกำหนด",
+        painTitle: "ปัญหาที่พบบ่อย",
+        painItems: [
+          "เอกสารที่ต้องเซ็นมีจำนวนมาก",
+          "บางครั้งต้องเข้าบริษัทเพื่อเซ็นเอกสารเพียง 1 ฉบับ",
+          "เวลาที่ใช้ในการเซ็นกลายเป็นภาระของงาน",
+          "เหนื่อย/ล้าจากการเซ็นเอกสาร",
+          "ยุ่งยากมากเพราะต้องเซ็นหลายฉบับ",
+        ],
+        solutionTitle: "บริการสนับสนุน Invoice & e-Receipt แบบครบวงจร",
+        solutionDesc:
+          "Japan System สนับสนุน Invoice & e-Receipt ซึ่งเป็นหนึ่งใน 9 มาตรการ DX ที่กรมสรรพากรไทยผลักดัน",
+        blocks: {
+          eTax: {
+            title: "e‑Tax Invoice & e‑Receipt คืออะไร",
+            desc: "ออกเอกสาร/จัดเก็บ/ค้นหาใบกำกับและใบเสร็จแบบดิจิทัล ลดกระดาษ เพิ่มความเร็ว และพร้อมตรวจสอบย้อนหลัง",
+          },
+          signature: {
+            title: "Digital Signature คืออะไร",
+            desc: "การลงนามที่ปลอดภัย ตรวจสอบตัวตนและความถูกต้องของเอกสาร ช่วยอนุมัติจากระยะไกลและลดความเสี่ยง",
+          },
+        },
+        compareTitle: "ตัวอย่างการลดต้นทุนเมื่อใช้ E‑TAX",
+        compareSubtitle: "กระบวนการเดิม เทียบกับ เมื่อใช้ Japan System e‑Tax",
+        metrics: [
+          { k: "ประหยัดเวลา", current: 25, withSystem: 75 },
+          { k: "ลดต้นทุนกระดาษ", current: 15, withSystem: 70 },
+          { k: "เพิ่มความปลอดภัย", current: 35, withSystem: 85 },
+        ],
+        cta: { primary: "ติดต่อเรา", secondary: "ดูรายละเอียด e‑Tax" },
+      },
 
     },
   },
@@ -705,6 +775,41 @@ export const translations = {
           phone: "02-664-1674",
           map: "マップ（プレースホルダー）",
         },
+      },
+      invoiceReceipt: {
+        metaTitle: "Invoice & e-Receipt",
+        title: "Invoice & e-Receipt",
+        heroSubtitle:
+          "信頼と効率にフォーカスした、デジタル請求書・領収書ソリューション。",
+        painTitle: "よくある課題",
+        painItems: [
+          "署名する書類が多すぎる",
+          "1枚のために出社しなければならないことがある",
+          "署名の時間が業務負担になっている",
+          "署名作業に疲れてしまう",
+          "大量に署名が必要でとても面倒",
+        ],
+        solutionTitle: "Invoice & e-Receipt を包括的にサポート",
+        solutionDesc:
+          "Japan Systemは、タイ歳入局が推進する9つのDX施策の一つである Invoice & e-Receipt を支援します。",
+        blocks: {
+          eTax: {
+            title: "e‑Tax Invoice & e‑Receipt とは",
+            desc: "請求書・領収書の発行、保管、検索をデジタル化し、紙コスト削減と業務スピード、監査対応力を向上します。",
+          },
+          signature: {
+            title: "デジタル署名とは",
+            desc: "本人性の確認と改ざん防止を実現する安全な署名方式。リモート承認を可能にし、リスクを低減します。",
+          },
+        },
+        compareTitle: "E‑TAX 導入によるコスト削減例",
+        compareSubtitle: "現状のプロセス vs Japan System e‑Tax",
+        metrics: [
+          { k: "時間短縮", current: 25, withSystem: 75 },
+          { k: "紙コスト削減", current: 15, withSystem: 70 },
+          { k: "セキュリティ強化", current: 35, withSystem: 85 },
+        ],
+        cta: { primary: "お問い合わせ", secondary: "e‑Tax 詳細へ" },
       },
     },
   },

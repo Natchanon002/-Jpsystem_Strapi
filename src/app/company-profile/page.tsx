@@ -12,12 +12,11 @@ export default function CompanyProfilePage() {
   const p = t.pages.company;
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <PageTitle title={p.metaTitle} />
 
-      {/* Section 1: Hero - ปรับสีฟอนต์เป็นสีดำ (slate-900) */}
+      {/* Section 1: Hero */}
       <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-white">
-        {/* พื้นที่สำหรับใส่รูปพื้นหลัง */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/topB_company_profile.jpg"
@@ -26,11 +25,8 @@ export default function CompanyProfilePage() {
             className="object-cover"
             priority
           />
-          {/* ถ้าพื้นหลังสว่างมากจนอ่านยาก สามารถใส่ overlay สีขาวจางๆ ได้ครับ */}
-          {/* <div className="absolute inset-0 bg-white/10" /> */}
         </div>
 
-        {/* เนื้อหาด้านบนรูป - ปรับสีเป็น slate-900 (ดำเข้ม) */}
         <div className="relative z-10">
           <Container>
             <div className="max-w-2xl">
@@ -49,28 +45,32 @@ export default function CompanyProfilePage() {
         </div>
       </section>
 
-      {/* Section 2: About - โค้ดเดิมทั้งหมด */}
-      <section className="py-14 sm:py-16">
+      {/* Section 2: About */}
+      <section className="relative py-14 sm:py-16 overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute -right-32 top-20 h-64 w-64 rounded-full bg-sky-100/40 blur-3xl" />
+        <div className="absolute -left-32 bottom-20 h-48 w-48 rounded-full bg-indigo-100/30 blur-3xl" />
+
         <Container>
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-center">
+          <div className="relative grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-center">
             <Reveal>
-              <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_28px_90px_rgba(15,23,42,0.10)] ring-1 ring-white/70">
-                <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_28px_90px_rgba(15,23,42,0.08)] card-glow gradient-border">
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                   {p.about.title}
                 </h2>
-                <p className="mt-4 text-base font-light leading-7 text-slate-600">
+                <div className="mt-4 h-0.5 w-16 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
+                <p className="mt-5 text-base font-light leading-7 text-slate-600">
                   {p.about.body}
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.10)] ring-1 ring-white/70">
+              <div className="group relative overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.08)]">
                 <div
-                  className="aspect-[16/10] w-full"
+                  className="aspect-[16/10] w-full transition-transform duration-700 group-hover:scale-[1.03]"
                   style={{
-                    backgroundImage:
-                      "url('/office.jpg')",
+                    backgroundImage: "url('/office.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
@@ -78,28 +78,31 @@ export default function CompanyProfilePage() {
                   role="img"
                 />
                 <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/45 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/30 to-transparent" />
               </div>
             </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* Section 3: Corporate Information - โค้ดเดิมทั้งหมด */}
-      <section className="border-y border-slate-100 bg-slate-50/50 py-14 sm:py-16">
+      {/* Section 3: Corporate Information */}
+      <section className="relative border-y border-slate-100 bg-gradient-to-br from-slate-50 to-sky-50/30 py-14 sm:py-16 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] w-2/3 bg-gradient-to-r from-transparent via-sky-200/50 to-transparent" />
+
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.infoTitle}
               </h2>
             </div>
           </Reveal>
 
-          <div className="mt-10 overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.10)] ring-1 ring-white/70">
+          <div className="mt-10 overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.06)]">
             <div className="divide-y divide-slate-100">
               {p.info.map((r, idx) => (
                 <Reveal key={r.k} delay={0.04 * idx}>
-                  <div className="grid grid-cols-1 gap-2 p-6 sm:grid-cols-3 sm:items-center">
+                  <div className="grid grid-cols-1 gap-2 p-6 sm:grid-cols-3 sm:items-center transition-colors duration-300 hover:bg-sky-50/30">
                     <div className="text-xs font-semibold tracking-wide text-slate-500">
                       {r.k}
                     </div>
@@ -114,26 +117,28 @@ export default function CompanyProfilePage() {
         </Container>
       </section>
 
-      {/* Section 4: Services - โค้ดเดิมทั้งหมด */}
-      <section className="py-14 sm:py-16">
+      {/* Section 4: Services */}
+      <section className="relative py-14 sm:py-16 overflow-hidden">
+        <div className="absolute -right-20 bottom-10 h-48 w-48 rounded-full bg-sky-100/30 blur-3xl" />
+
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.servicesTitle}
               </h2>
             </div>
           </Reveal>
 
-          <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_28px_90px_rgba(15,23,42,0.10)] ring-1 ring-white/70">
-            <ul className="space-y-4">
+          <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_28px_90px_rgba(15,23,42,0.06)] gradient-border">
+            <ul className="space-y-5">
               {p.services.map((s, idx) => (
                 <Reveal key={s} delay={0.04 * idx}>
-                  <li className="flex items-start gap-4">
-                    <span className="mt-0.5 grid h-8 w-8 place-items-center rounded-full border border-slate-100 bg-white">
-                      <Check className="h-4 w-4 text-sky-600" strokeWidth={2} />
+                  <li className="group flex items-start gap-4 rounded-2xl p-3 -mx-3 transition-colors duration-300 hover:bg-sky-50/40">
+                    <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-indigo-500 shadow-md shadow-sky-500/20 transition-transform duration-300 group-hover:scale-110">
+                      <Check className="h-4 w-4 text-white" strokeWidth={2.5} />
                     </span>
-                    <span className="text-base font-light leading-7 text-slate-700">
+                    <span className="text-base leading-7 text-slate-700">
                       {s}
                     </span>
                   </li>

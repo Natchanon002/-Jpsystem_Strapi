@@ -23,7 +23,7 @@ export default function NewReleasePage() {
             {/* พื้นที่สำหรับใส่รูปพื้นหลัง */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/topBG_new-release.jpg"
+                src="/topBG-new-releasesss.jpg"
                 alt="Background visual"
                 fill
                 className="object-cover"
@@ -33,11 +33,11 @@ export default function NewReleasePage() {
               <div className="absolute inset-0 bg-black/20" />
             </div>
 
-            <div className="relative z-10 max-w-2xl text-white">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <div className="relative z-10 mx-auto max-w-2xl text-center text-white">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl drop-shadow-lg">
                 {p.title}
               </h1>
-              <p className="mt-4 text-lg leading-8 text-slate-100 font-normal">
+              <p className="mt-4 text-lg leading-8 text-white/80 font-normal drop-shadow-md">
                 {p.subtitle}
               </p>
             </div>

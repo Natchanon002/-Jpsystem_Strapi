@@ -32,15 +32,15 @@ export default function ContactPage() {
   return (
     /* 1. เน้นพื้นหลังหลักเป็นสีฟ้าอ่อนแบบเจาะจง (bg-[#f0f9ff] หรือ bg-sky-50) */
     <div className="relative min-h-screen overflow-hidden py-14 sm:py-16 bg-sky-50">
-      
+
       {/* --- ส่วนหัว Hero Section --- */}
       <section className="relative mb-12 overflow-hidden rounded-[2.5rem] mx-4 sm:mx-10 bg-white shadow-xl border border-slate-100">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/topBG_contact.jpg" 
+            src="/imcontact.jpg"
             alt="Contact Us Background"
             fill
-            className="object-cover object-[85%_center]" 
+            className="object-cover object-[85%_center]"
             priority
           />
         </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
       {/* --- ส่วนเนื้อหา Form และ Information --- */}
       <Container>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          
+
           <Reveal>
             {/* ปรับสี Card ให้เป็นสีขาวเพื่อให้ตัดกับพื้นหลังสีฟ้าอ่อนด้านหลัง */}
             <div className="relative rounded-[2.5rem] border border-slate-100 bg-white p-7 shadow-2xl shadow-sky-900/5 ring-1 ring-white/70">

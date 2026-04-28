@@ -33,7 +33,7 @@ export function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
       <Container>
         <div className="flex h-16 items-center justify-between gap-4">
           <Link
@@ -71,7 +71,7 @@ export function Navbar() {
                 >
                   {t.nav[l.key]}
                   {active ? (
-                    <span className="absolute inset-x-2 -bottom-0.5 h-px bg-sky-500/70" />
+                    <span className="absolute inset-x-2 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
                   ) : null}
                 </Link>
               );
@@ -188,7 +188,7 @@ export function Navbar() {
             <LanguageSwitcher />
             <Link
               href="/contact"
-              className="hidden rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-slate-800 md:inline-flex"
+              className="hidden rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold tracking-wide text-white shadow-lg shadow-slate-900/10 transition-all hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-xl shimmer md:inline-flex"
               data-cursor="interactive"
             >
               {t.nav.contact}

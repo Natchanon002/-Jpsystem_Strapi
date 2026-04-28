@@ -9,14 +9,14 @@ import { PageTransition } from "@/components/PageTransition";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "700", "900"],
   display: "swap",
 });
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-jp",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "700", "900"],
   display: "swap",
 });
 

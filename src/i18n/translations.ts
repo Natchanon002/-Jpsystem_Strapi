@@ -16,7 +16,7 @@ export const translations = {
       solution: "Solution",
       newRelease: "New Release",
       itSystem: "IT System",
-      eTax: "e-Tax & Compliance",
+      eTax: "e-Tax Invoice & e-Receipt",
       invoiceReceipt: "Invoice & e-Receipt",
       marketing: "Marketing",
       myLogStar: "My Log Star",
@@ -384,7 +384,7 @@ export const translations = {
       solution: "โซลูชัน",
       newRelease: "ข่าวสาร/ผลิตภัณฑ์ใหม่",
       itSystem: "ระบบ IT",
-      eTax: "e-Tax & Compliance",
+      eTax: "e-Tax Invoice & e-Receipt",
       invoiceReceipt: "Invoice & e-Receipt",
       marketing: "การตลาด",
       myLogStar: "My Log Star",
@@ -422,7 +422,7 @@ export const translations = {
               desc: "ออกแบบสถาปัตยกรรมก่อนพัฒนา เพื่อคุณภาพ ความเร็ว และดูแลต่อได้ระยะยาว",
             },
             {
-              title: "e-Tax & Compliance",
+              title: "e-Tax Invoice & e-Receipt",
               desc: "ปรับกระบวนการเป็นดิจิทัล ลดต้นทุน และทำงานตามข้อกำหนดได้อย่างมั่นใจ",
             },
             {
@@ -751,7 +751,7 @@ export const translations = {
       solution: "ソリューション",
       newRelease: "新製品",
       itSystem: "ITシステム",
-      eTax: "e-Tax & コンプライアンス",
+      eTax: "e-Tax Invoice & e-Receipt",
       invoiceReceipt: "Invoice / e-Receipt",
       marketing: "マーケティング",
       myLogStar: "My Log Star",
@@ -789,7 +789,7 @@ export const translations = {
               desc: "設計から品質を担保し、拡張性と保守性を重視した実装を行います。",
             },
             {
-              title: "e-Tax / コンプライアンス",
+              title: "e-Tax Invoice & e-Receipt",
               desc: "業務を電子化し、コスト削減とスピード向上を実現します。",
             },
             {

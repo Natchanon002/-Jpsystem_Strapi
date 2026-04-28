@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
@@ -39,8 +40,15 @@ export function Navbar() {
             href="/"
             className="group flex items-center gap-3 text-sm font-semibold tracking-tight text-slate-900"
           >
-            <span className="relative grid h-8 w-8 place-items-center rounded-full border border-slate-200 bg-white">
-              <span className="h-3 w-3 rounded-full bg-sky-500/80" />
+            <span className="relative h-8 w-8 overflow-hidden rounded-full">
+              <Image
+                src="/logo_japanSystem.png"
+                alt="Japan System Logo"
+                width={32}
+                height={32}
+                className="object-contain"
+                priority
+              />
             </span>
             <span className="hidden sm:block">{t.brand}</span>
             <span className="sm:hidden">JST</span>

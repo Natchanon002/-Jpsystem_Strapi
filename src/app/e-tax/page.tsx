@@ -1,417 +1,328 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import {
-  AlertTriangle,
-  FileCheck,
-  Fingerprint,
-  ShieldCheck,
-  TrendingDown,
-} from "lucide-react";
 import { Container } from "@/components/Container";
-import { PageTitle } from "@/components/PageTitle";
 import { Reveal } from "@/components/Reveal";
+import { PageTitle } from "@/components/PageTitle";
 import { useLanguage } from "@/i18n/LanguageContext";
-
-function InfoPill({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-      <div className="text-xs font-semibold tracking-wide text-slate-500">
-        {label}
-      </div>
-      <div className="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-        {value}
-      </div>
-    </div>
-  );
-}
-
-function StatBar({
-  label,
-  current,
-  withSystem,
-}: {
-  label: string;
-  current: number;
-  withSystem: number;
-}) {
-  return (
-    <div className="rounded-2xl border border-slate-100 bg-white p-6">
-      <div className="flex items-end justify-between gap-4">
-        <div className="text-sm font-bold tracking-tight text-slate-900">{label}</div>
-        <div className="text-xs font-semibold text-slate-500">
-          Current <span className="text-slate-900">{current}%</span> → With Japan System{" "}
-          <span className="text-slate-900">{withSystem}%</span>
-        </div>
-      </div>
-      <div className="mt-4 space-y-2">
-        <div>
-          <div className="mb-1 text-[11px] font-semibold tracking-wide text-slate-500">
-            Current Process
-          </div>
-          <div className="h-2 overflow-hidden rounded-full bg-slate-100">
-            <div
-              className="h-full rounded-full bg-slate-400/70"
-              style={{ width: `${current}%` }}
-            />
-          </div>
-        </div>
-        <div>
-          <div className="mb-1 text-[11px] font-semibold tracking-wide text-slate-500">
-            With Japan System e‑Tax
-          </div>
-          <div className="h-2 overflow-hidden rounded-full bg-slate-100">
-            <div
-              className="h-full rounded-full bg-sky-500/70"
-              style={{ width: `${withSystem}%` }}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { ChevronDown } from "lucide-react";
 
 export default function ETaxPage() {
   const { t } = useLanguage();
   const p = t.pages.eTax;
 
+  const scrollToContent = () => {
+    window.scrollTo({
+      top: window.innerHeight * 0.8,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div>
+    <div className="bg-white min-h-screen font-sans flex flex-col">
       <PageTitle title={p.metaTitle} />
 
-      {/* Section 1: Hero */}
-      <section className="relative overflow-hidden border-b border-slate-100">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-slate-50" />
-          <div
-            className="absolute inset-0 opacity-[0.14]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(2,132,199,0.12), rgba(15,23,42,0.03)), url('/hero-it.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+      {/* --- ส่วนที่ 1: Hero Section --- */}
+      <section className="relative h-[450px] sm:h-[500px] lg:h-[650px] w-full flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          {/* [ รูปที่ 1 ]: รูปพื้นหลังใหญ่ด้านบนสุด (Hero)
+              ไฟล์ภาพ: public/bg_etax_hero.jpg
+          */}
+          <Image
+            src="/bg_etax_hero.jpg"
+            alt="E-Tax Invoice & E-Receipt Background"
+            fill
+            className="object-cover"
+            priority
           />
-          <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
-          <div className="absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-slate-900/5 blur-3xl" />
+          <div className="absolute inset-0 bg-slate-900/40" />
         </div>
 
+        <div className="relative z-10 text-center px-6">
+          <Reveal>
+            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-2xl">
+              E-Tax Invoice & E-Receipt
+            </h1>
+
+            <button
+              onClick={scrollToContent}
+              className="mt-16 group relative inline-flex items-center justify-center"
+            >
+              <div className="absolute h-14 w-14 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm transition-all group-hover:bg-white/20" />
+              <ChevronDown className="relative h-7 w-7 text-white animate-bounce" />
+            </button>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* --- ส่วนที่ 2: Pain Points (Are you wasting your time...) --- */}
+      <section className="relative py-24 overflow-hidden bg-white">
         <Container>
-          <div className="relative py-16 sm:py-20 lg:py-24">
+          <div className="text-center mb-16">
             <Reveal>
-              <div className="inline-flex items-center gap-2 rounded-full border border-slate-100 bg-white/70 px-3 py-1 text-xs font-semibold tracking-wide text-slate-700 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-sky-500/80" />
-                Clean Professionalism
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight px-4">
+                Are you wasting your time on handwritten signatures <br className="hidden md:block" /> on various documents?
+              </h2>
+              <div className="mt-6 mx-auto h-1 w-20 rounded-full bg-sky-500" />
+            </Reveal>
+          </div>
+
+          <div className="relative mx-auto max-w-5xl px-4">
+            <Reveal>
+              <div className="relative overflow-hidden rounded-[3rem] shadow-2xl border border-slate-200">
+
+                {/* [ รูปที่ 2 ]: รูปพื้นหลังส่วน Pain Points (รูปกองกระดาษ/ลายมือ)
+                    ตำแหน่งไฟล์: public/bg_painpoints.jpg 
+                */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/bg_painpoints.jpg"
+                    alt="Background paperwork"
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Overlay ไล่เฉดสีเพื่อให้ข้อความอ่านง่ายขึ้น */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent" />
+                </div>
+
+                <div className="relative z-10 px-8 py-16 sm:px-20 sm:py-20">
+                  <div className="space-y-8 max-w-2xl">
+                    {p.painItems.map((item, idx) => (
+                      <Reveal key={idx} delay={idx * 0.1} x={-20}>
+                        <div className="flex items-start gap-5 group">
+                          {/* Bullet Point ดีไซน์ใหม่แบบ Glow */}
+                          <div className="mt-2 h-3 w-3 rounded-full bg-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.8)] transition-transform group-hover:scale-125" />
+
+                          <p className="text-xl md:text-2xl font-semibold text-white leading-snug drop-shadow-md">
+                            {item}
+                          </p>
+                        </div>
+                      </Reveal>
+                    ))}
+                  </div>
+                </div>
               </div>
             </Reveal>
-            <Reveal delay={0.08}>
-              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
-                {p.title}
-              </h1>
+          </div>
+        </Container>
+      </section>
+
+      {/* --- ส่วนที่ 3: About Section --- */}
+      <section className="py-16 bg-slate-50">
+        <Container>
+          <Reveal>
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight">
+                About e-Tax Invoice & e-Receipt and Digital Signature
+              </h2>
+              <div className="mt-4 mx-auto h-0.5 w-48 bg-slate-400" />
+              <p className="mt-8 text-slate-500 text-sm md:text-base leading-relaxed">
+                In Japan System We support the introduction of e-Tax invoice & e-Receipt and digital signatures,
+                one of the nine DX measures promoted by the Thai Revenue Service.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* --- ส่วนที่ 4: Definition Cards --- */}
+      <section className="py-16 bg-white">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Reveal>
+              <div className="h-full rounded-[2rem] bg-sky-50 p-8 shadow-sm border border-sky-100">
+                <div className="flex items-start justify-between mb-6">
+                  <h3 className="text-xl font-bold text-slate-800">What is e-Tax Invoice & e-Receipt?</h3>
+                  <div className="bg-rose-100 p-2 rounded-lg">
+                    {/* [ รูปที่ 3 ]: ไอคอนหัวข้อ e-Tax
+                        ไฟล์ภาพ: public/icon_etax.png
+                    */}
+                    <Image src="/icon_etax.png" width={32} height={32} alt="e-Tax Icon" />
+                  </div>
+                </div>
+                <div className="h-px w-full bg-slate-300 mb-6" />
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Refers to the use of tax invoices, electronic receipts, and digital signatures. Automatic date and time stamp.
+                </p>
+              </div>
             </Reveal>
-            <Reveal delay={0.12}>
-              <div className="relative max-w-3xl overflow-hidden rounded-[2rem] border border-white/60 bg-white/90 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur">
-                <div className="pointer-events-none absolute inset-0 bg-slate-100/70" />
-                <div className="relative">
-                  <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
-                    {p.heroSubtitle}
+
+            <Reveal delay={0.1}>
+              <div className="h-full rounded-[2rem] bg-sky-50 p-8 shadow-sm border border-sky-100">
+                <div className="flex items-start justify-between mb-6">
+                  <h3 className="text-xl font-bold text-slate-800">What is a digital signatures?</h3>
+                  <div className="bg-amber-100 p-2 rounded-lg">
+                    {/* [ รูปที่ 4 ]: ไอคอนหัวข้อ Digital Signatures
+                        ไฟล์ภาพ: public/icon_signature.png
+                    */}
+                    <Image src="/icon_signature.png" width={32} height={32} alt="Signature Icon" />
+                  </div>
+                </div>
+                <div className="h-px w-full bg-slate-300 mb-6" />
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Digital signature and electronic signatures it is the information attached to the Invoice & Tax Invoice document sent to show the identity of the sender of the document. Not just placing a picture signature on the tax invoice but it also uses digital technologyto prevent unauthorized use, signatures that enhancesecurity and convenience with data encryptiontechnology, including time stamps, etc.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* --- ส่วนที่ 5: Benefits Section --- */}
+      <section className="py-12 bg-white">
+        <Container>
+          <div className="text-center mb-10">
+            <Reveal>
+              <h2 className="text-xl font-semibold text-slate-600">Benefits of introducing e-Tax Invoice & e-Receipt and digital signatures</h2>
+              <div className="mt-4 mx-auto h-px w-48 bg-slate-400" />
+            </Reveal>
+          </div>
+
+          <div className="relative rounded-[3rem] border border-white/50 bg-slate-100/30 p-4 shadow-xl backdrop-blur-md overflow-hidden">
+            <div className="absolute -left-10 -bottom-10 h-32 w-32 bg-amber-200/20 blur-3xl rounded-full" />
+            <div className="absolute -right-10 -top-10 h-32 w-32 bg-sky-200/20 blur-3xl rounded-full" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
+              {[
+                { id: 1, text: "Saving tax invoices on your own server orcloud server allows you to secure storageand without  the risk of document loss.", icon: "/benefit_1.png" },
+                { id: 2, text: "Copies of certifications are stored on the IRS server.(Tax office)", icon: "/benefit_2.png" },
+                { id: 3, text: "There is no need to go to the office and sign.", icon: "/benefit_3.png" },
+                { id: 4, text: "Eliminate the risk of misuse of signatures byclarifying who signed when and being ableto verify them clearly.", icon: "/benefit_4.png" },
+              ].map((item, idx) => (
+                <Reveal key={item.id} delay={idx * 0.05}>
+                  <div className="bg-white rounded-[2rem] p-6 shadow-md h-full flex flex-col border border-slate-100">
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-slate-300 font-bold">{item.id}</span>
+                      {/* [ รูปที่ 5-8 ]: ไอคอนรายการประโยชน์ 1-4
+                          ไฟล์ภาพ: public/benefit_1.png ถึง benefit_4.png
+                      */}
+                      <Image src={item.icon} width={30} height={30} alt="icon" className="object-contain" />
+                    </div>
+                    <div className="h-px w-full bg-slate-100 mb-4" />
+                    <p className="text-[12px] leading-relaxed text-slate-500 font-medium">
+                      {item.text}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* --- ส่วนที่ 6: Mechanism Section --- */}
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="text-center mb-12">
+            <Reveal>
+              <h2 className="text-2xl font-bold text-slate-800 tracking-tight">e-Tax Invoice & e-Receipt and Digital Signature Mechanism</h2>
+              <div className="mt-4 mx-auto h-px w-56 bg-slate-400" />
+            </Reveal>
+          </div>
+          <Reveal>
+            <div className="mx-auto max-w-5xl rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200 bg-white p-4 text-center">
+              {/* [ รูปที่ 9 ]: รูปแผนผังขั้นตอนการทำงาน (Mechanism)
+                  ไฟล์ภาพ: public/etax_mechanism.jpg
+              */}
+              <Image
+                src="/e-tax_diagram_en.jpg"
+                alt="Mechanism Diagram"
+                width={1200}
+                height={800}
+                className="inline-block object-contain"
+              />
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* --- ส่วนที่ 7: Introduction & Build System --- */}
+      <section className="py-16 bg-white">
+        <Container>
+          <div className="relative mx-auto max-w-5xl">
+            <Reveal>
+              <div className="relative overflow-hidden rounded-[3rem] border border-slate-200 p-1 shadow-2xl">
+                <div className="absolute inset-0 z-0 opacity-10">
+                  {/* [ รูปที่ 10 ]: รูปพื้นหลังจางๆ ในส่วนแนะนำการติดตั้งระบบ
+                      ไฟล์ภาพ: public/bg_etax_hero.jpg (หรือรูปอื่นตามต้องการ)
+                  */}
+                  <Image src="/bg_etax_hero.jpg" alt="background" fill className="object-cover" />
+                </div>
+                <div className="relative z-10 px-8 py-14 sm:px-16 text-center bg-white/95 rounded-[2.9rem]">
+                  <h2 className="text-xl md:text-2xl font-bold text-slate-800 tracking-tight">
+                    For the introduction of e-Tax Invoice & e-Receipt and digital signatures,
+                  </h2>
+                  <div className="mt-6 mx-auto h-px w-48 bg-slate-400" />
+                  <p className="mt-8 text-slate-600 text-sm md:text-base leading-relaxed max-w-4xl mx-auto">
+                    In addition to the application process for various services It is also necessary to introduce (and build) a system that meets the requirements of the Thai Revenue Office, Japan System, operates everything from the application process to the introduction and processing of tax invoices, electronic receipts, and also digital signatures on electronic documents.
                   </p>
-                  <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100/90">
-                    <div className="grid h-72 w-full place-items-center text-sm font-semibold uppercase tracking-[0.32em] text-slate-500">
-                      Image placeholder
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </Reveal>
-            <Reveal delay={0.20}>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
-                  data-cursor="interactive"
-                >
-                  {p.cta.primary} <span className="ml-2 text-white/80">→</span>
-                </Link>
               </div>
             </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* Section 2: Pain Points */}
-      <section className="py-14 sm:py-16">
+      {/* --- ส่วนที่ 8: Cost Reduction Example --- */}
+      <section className="py-16 bg-white flex-grow">
         <Container>
-          <Reveal>
-            <div className="max-w-2xl">
-              <div className="text-xs font-semibold tracking-wide text-sky-600">
-                {p.painTitle}
-              </div>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                {p.painTitle}
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {p.painItems.map((it, idx) => (
-              <Reveal key={it} delay={0.04 * idx}>
-                <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-                  <div className="flex items-start gap-4">
-                    <div className="grid h-11 w-11 place-items-center rounded-xl border border-slate-100 bg-white">
-                      <AlertTriangle className="h-5 w-5 text-sky-600" strokeWidth={1.6} />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-sm font-bold tracking-tight text-slate-900">
-                        {it}
-                      </div>
-                      <div className="mt-2 text-sm leading-6 text-slate-600">
-                        Reduce friction with digital workflow + secure signing.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Section 3: Solution */}
-      <section className="border-y border-slate-100 bg-slate-50/50 py-14 sm:py-16">
-        <Container>
-          <Reveal>
-            <div className="max-w-3xl">
-              <div className="text-xs font-semibold tracking-wide text-sky-600">
-                {p.solutionTitle}
-              </div>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                {p.solutionTitle}
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-600">
-                {p.solutionDesc}
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="text-center mb-12">
             <Reveal>
-              {/* Image Placeholder */}
-              <div className="rounded-3xl border border-slate-100 bg-gradient-to-br from-slate-50 to-slate-100 p-7 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                <div className="aspect-square w-full overflow-hidden rounded-2xl border border-slate-100 bg-white">
-                  <div className="grid h-full w-full place-items-center">
-                    <div className="text-xs font-semibold text-slate-500">SOLUTION ILLUSTRATION</div>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <div className="space-y-5">
-                <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                  <div className="flex items-start gap-5">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl border border-slate-100 bg-white">
-                      <FileCheck className="h-6 w-6 text-sky-600" strokeWidth={1.6} />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-sm font-bold tracking-tight text-slate-900">
-                        {p.blocks.eTax.title}
-                      </div>
-                      <div className="mt-2 text-sm leading-6 text-slate-600">
-                        {p.blocks.eTax.desc}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 h-px w-full bg-slate-100" />
-                  <div className="mt-6 grid grid-cols-2 gap-3 text-xs font-semibold text-slate-600">
-                    <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Paperless workflow
-                    </div>
-                    <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Audit-ready storage
-                    </div>
-                  </div>
-                </div>
-
-                <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                  <div className="flex items-start gap-5">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl border border-slate-100 bg-white">
-                      <Fingerprint className="h-6 w-6 text-sky-600" strokeWidth={1.6} />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-sm font-bold tracking-tight text-slate-900">
-                        {p.blocks.signature.title}
-                      </div>
-                      <div className="mt-2 text-sm leading-6 text-slate-600">
-                        {p.blocks.signature.desc}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 h-px w-full bg-slate-100" />
-                  <div className="mt-6 grid grid-cols-2 gap-3 text-xs font-semibold text-slate-600">
-                    <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Remote approval
-                    </div>
-                    <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Tamper resistance
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h2 className="text-2xl font-semibold text-slate-700">Cost reduction example by introducing e-Tax Invoice & e-Receipt</h2>
+              <div className="mt-4 mx-auto h-px w-56 bg-slate-400" />
             </Reveal>
           </div>
 
-          <Reveal delay={0.12}>
-            <div className="mt-8 rounded-3xl border border-slate-100 bg-white p-7">
-              <div className="flex items-center gap-3">
-                <ShieldCheck className="h-5 w-5 text-sky-600" strokeWidth={1.6} />
-                <div className="text-sm font-bold tracking-tight text-slate-900">
-                  Trust by design
-                </div>
-              </div>
-              <div className="mt-2 text-sm leading-6 text-slate-600">
-                Thin separators, clear information architecture, and enterprise-grade posture—
-                designed to feel calm, premium, and reliable.
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* Section 4: Cost reduction & comparison */}
-      <section className="py-14 sm:py-16">
-        <Container>
           <Reveal>
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-2 text-xs font-semibold tracking-wide text-sky-600">
-                <TrendingDown className="h-4 w-4" strokeWidth={1.8} />
-                {p.compareTitle}
-              </div>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                {p.compareTitle}
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-600">
-                {p.compareSubtitle}
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid grid-cols-1 gap-5">
-            {p.metrics.map((m, idx) => (
-              <Reveal key={m.k} delay={0.05 * idx}>
-                <StatBar label={m.k} current={m.current} withSystem={m.withSystem} />
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.12}>
-            <div className="mt-10 flex flex-col items-start justify-between gap-4 rounded-3xl border border-slate-100 bg-white p-7 sm:flex-row sm:items-center">
-              <div>
-                <div className="text-sm font-bold tracking-tight text-slate-900">
-                  Ready to modernize approvals?
-                </div>
-                <div className="mt-2 text-sm leading-6 text-slate-600">
-                  Start with a clean pilot—then scale with confidence.
-                </div>
-              </div>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
-                data-cursor="interactive"
-              >
-                {p.cta.primary} <span className="ml-2 text-white/80">→</span>
-              </Link>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* Section 5: e-Tax Details */}
-      <section className="border-t border-slate-100 py-14 sm:py-16">
-        <Container>
-          <Reveal>
-            <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                {p.detailsTitle}
-              </h2>
-              <p className="mt-3 text-base leading-7 text-slate-600">{p.detailsSubtitle}</p>
-            </div>
-          </Reveal>
-
-          {/* Image Placeholder Section */}
-          <Reveal>
-            <div className="mt-10 rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 to-slate-100 p-8">
-              <div className="aspect-video w-full overflow-hidden rounded-xl border border-slate-100 bg-white">
-                <div className="grid h-full w-full place-items-center">
-                  <div className="rounded-full border border-slate-300 bg-white/60 px-4 py-2 text-xs font-semibold text-slate-600 backdrop-blur">
-                    INFOGRAPHIC / IMAGE PLACEHOLDER
+            <div className="mx-auto max-w-3xl rounded-[2.5rem] border border-slate-200 bg-white p-8 md:p-12 shadow-lg">
+              <h3 className="text-center text-slate-600 font-bold mb-10 text-lg">Tax Invoice (Paper medium)</h3>
+              <div className="space-y-6 max-w-md mx-auto">
+                {[
+                  { label: "Use paper", price: "0.8 Baht/set" },
+                  { label: "Printing fee", price: "2 Baht/set" },
+                  { label: "Storage material", price: "0.02 Baht/set" },
+                  { label: "Delivery fee (EMS)", price: "37 Baht/set" },
+                ].map((item) => (
+                  <div key={item.label} className="flex justify-between items-center text-slate-600 border-b border-slate-100 pb-2">
+                    <span className="font-medium">{item.label} :</span>
+                    <span className="font-bold">{item.price}</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
-            <Reveal>
-              <div className="rounded-2xl border border-slate-100 bg-white p-7">
-                <div className="text-xs font-semibold tracking-wide text-sky-600">
-                  {p.detailsProblemTitle}
-                </div>
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-700">
-                  {p.detailsProblemItems.map((it) => (
-                    <li key={it} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-900/70" />
-                      <span>{it}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <div className="rounded-2xl border border-slate-100 bg-white p-7">
-                <div className="text-xs font-semibold tracking-wide text-sky-600">
-                  {p.detailsSolutionTitle}
-                </div>
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-700">
-                  {p.detailsSolutionItems.map((it) => (
-                    <li key={it} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500/80" />
-                      <span>{it}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.12}>
-            <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-7">
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <div className="text-xs font-semibold tracking-wide text-sky-600">
-                    {p.detailsImpactTitle}
-                  </div>
-                  <div className="mt-1 text-lg font-bold tracking-tight text-slate-900">
-                    {p.detailsImpactTitle}
-                  </div>
-                </div>
-                <div className="text-xs font-medium text-slate-500">
-                  *Illustrative values
-                </div>
-              </div>
-
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {p.detailsImpactItems.map((it) => (
-                  <InfoPill key={it.label} label={it.label} value={it.value} />
                 ))}
+                <div className="flex justify-between items-center text-slate-800 pt-4">
+                  <span className="text-xl font-black uppercase">Total</span>
+                  <span className="text-xl font-black">39.82 Baht</span>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <p className="text-slate-500 text-sm italic font-medium">Monthly cost when the circulation is 1,000 copies / month</p>
+                <div className="mt-4 text-2xl md:text-3xl font-black text-rose-500">
+                  39.82 Baht × 1,000 = 39,820 Baht / month
+                </div>
               </div>
             </div>
           </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="mt-10 text-center">
+              <h4 className="text-2xl md:text-4xl font-black text-rose-600 tracking-tight">
+                Monthly 39,820 baht + labor cost reduction!
+              </h4>
+            </div>
+          </Reveal>
+
+          <div className="mt-16 flex justify-end">
+            <Reveal>
+              <Link href="/contact">
+                <button className="bg-red-600 text-white px-10 py-3 rounded-full font-bold text-sm uppercase tracking-widest shadow-lg transition-all hover:bg-red-700 hover:scale-105">
+                  Contact
+                </button>
+              </Link>
+            </Reveal>
+          </div>
         </Container>
       </section>
     </div>
   );
 }
-

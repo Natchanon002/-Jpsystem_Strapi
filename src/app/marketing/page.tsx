@@ -44,7 +44,7 @@ export default function MarketingPage() {
         <div className="relative z-10 text-center px-6">
           <Reveal>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-2xl uppercase">
-              Website and online marketing
+              {p.heroTitle}
             </h1>
             <div className="mt-8 mx-auto h-0.5 w-24 bg-sky-400" />
 
@@ -68,7 +68,7 @@ export default function MarketingPage() {
             <Reveal>
               <div className="flex flex-col items-center group">
                 <h3 className="text-2xl font-bold text-slate-800 mb-6 underline underline-offset-8 decoration-slate-300">
-                  Website
+                  {p.cardWebsite}
                 </h3>
                 <div className="relative w-full aspect-square max-w-[450px] rounded-[3rem] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
                   {/* รูปพื้นหลังจำลองโต๊ะทำงาน */}
@@ -93,7 +93,7 @@ export default function MarketingPage() {
             <Reveal delay={0.1}>
               <div className="flex flex-col items-center group">
                 <h3 className="text-2xl font-bold text-slate-800 mb-6 underline underline-offset-8 decoration-slate-300">
-                  Online marketing
+                  {p.cardOnlineMarketing}
                 </h3>
                 <div className="relative w-full aspect-square max-w-[450px] rounded-[3rem] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
                   {/* รูปพื้นหลังจำลอง Laptop/Marketing */}
@@ -127,7 +127,7 @@ export default function MarketingPage() {
       <footer className="py-10 bg-white border-t border-slate-100">
         <Container>
           <p className="text-center text-[10px] text-slate-400 uppercase tracking-[0.2em] font-medium">
-            Copyright Japan System Co., Ltd. & Japan System (Thailand) Co., Ltd. All rights Reserved.
+            {t.common.copyright}
           </p>
         </Container>
       </footer>

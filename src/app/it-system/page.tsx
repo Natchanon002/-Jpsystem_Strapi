@@ -20,12 +20,10 @@ export default function ITSystemPage() {
   };
 
   // กำหนดชื่อหัวข้อและชื่อไฟล์รูปภาพตามลำดับ
-  const services = [
-    { title: "Maintenance", fileName: "Maintainance.png" },
-    { title: "Website & Online marketing", fileName: "Website & Online marketing.png" },
-    { title: "IT Support & Help Desk", fileName: "IT Support & Help Desk.png" },
-    { title: "Product management system", fileName: "Product management system.png" },
-  ];
+  const services = p.serviceItems.map((item, idx) => {
+    const fileNames = ["Maintainance.png", "Website & Online marketing.png", "IT Support & Help Desk.png", "Product management system.png"];
+    return { title: item.title, fileName: fileNames[idx] };
+  });
 
   return (
     <div className="bg-sky-50 min-h-screen pb-20 font-sans">
@@ -47,7 +45,7 @@ export default function ITSystemPage() {
         <div className="relative z-10 text-center">
           <Reveal>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-md">
-              IT System
+              {p.title}
             </h1>
             
             <button 
@@ -67,7 +65,7 @@ export default function ITSystemPage() {
           <Reveal>
             <div className="text-center mb-12">
               <h2 className="text-2xl font-bold text-slate-800 sm:text-3xl inline-block relative">
-                Products / Services
+                {p.productsTitle}
                 <div className="mt-3 h-0.5 w-full bg-slate-300" />
               </h2>
             </div>
@@ -104,7 +102,7 @@ export default function ITSystemPage() {
       {/* Footer */}
       <div className="mt-20 text-center px-4">
         <p className="text-[10px] text-slate-400 uppercase tracking-widest font-medium">
-          Copyright Japan System Co., Ltd. & Japan System (Thailand) Co., Ltd. All rights Reserved.
+          {t.common.copyright}
         </p>
       </div>
     </div>

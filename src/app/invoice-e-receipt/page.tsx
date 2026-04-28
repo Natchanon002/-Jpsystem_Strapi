@@ -6,7 +6,6 @@ import {
   FileCheck,
   Fingerprint,
   ShieldCheck,
-  TrendingDown,
 } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
@@ -17,24 +16,32 @@ function StatBar({
   label,
   current,
   withSystem,
+  currentProcessLabel,
+  withJapanSystemLabel,
+  currentLabel,
+  withSystemLabel,
 }: {
   label: string;
   current: number;
   withSystem: number;
+  currentProcessLabel: string;
+  withJapanSystemLabel: string;
+  currentLabel: string;
+  withSystemLabel: string;
 }) {
   return (
     <div className="rounded-2xl border border-slate-100 bg-white p-6">
       <div className="flex items-end justify-between gap-4">
         <div className="text-sm font-bold tracking-tight text-slate-900">{label}</div>
         <div className="text-xs font-semibold text-slate-500">
-          Current <span className="text-slate-900">{current}%</span> → With Japan System{" "}
+          {currentLabel} <span className="text-slate-900">{current}%</span> → {withSystemLabel}{" "}
           <span className="text-slate-900">{withSystem}%</span>
         </div>
       </div>
       <div className="mt-4 space-y-2">
         <div>
           <div className="mb-1 text-[11px] font-semibold tracking-wide text-slate-500">
-            Current Process
+            {currentProcessLabel}
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-slate-100">
             <div
@@ -45,7 +52,7 @@ function StatBar({
         </div>
         <div>
           <div className="mb-1 text-[11px] font-semibold tracking-wide text-slate-500">
-            With Japan System e‑Tax
+            {withJapanSystemLabel}
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-slate-100">
             <div
@@ -89,7 +96,7 @@ export default function InvoiceEReceiptPage() {
             <Reveal>
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-100 bg-white/70 px-3 py-1 text-xs font-semibold tracking-wide text-slate-700 backdrop-blur">
                 <span className="h-1.5 w-1.5 rounded-full bg-sky-500/80" />
-                Clean Professionalism
+                {p.heroChip}
               </div>
             </Reveal>
             <Reveal delay={0.08}>
@@ -129,10 +136,7 @@ export default function InvoiceEReceiptPage() {
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <div className="text-xs font-semibold tracking-wide text-sky-600">
-                {p.painTitle}
-              </div>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.painTitle}
               </h2>
             </div>
@@ -151,7 +155,7 @@ export default function InvoiceEReceiptPage() {
                         {it}
                       </div>
                       <div className="mt-2 text-sm leading-6 text-slate-600">
-                        Reduce friction with digital workflow + secure signing.
+                        {p.painItemSub}
                       </div>
                     </div>
                   </div>
@@ -167,10 +171,7 @@ export default function InvoiceEReceiptPage() {
         <Container>
           <Reveal>
             <div className="max-w-3xl">
-              <div className="text-xs font-semibold tracking-wide text-sky-600">
-                {p.solutionTitle}
-              </div>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.solutionTitle}
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-600">
@@ -185,7 +186,7 @@ export default function InvoiceEReceiptPage() {
               <div className="rounded-3xl border border-slate-100 bg-gradient-to-br from-slate-50 to-slate-100 p-7 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
                 <div className="aspect-square w-full overflow-hidden rounded-2xl border border-slate-100 bg-white">
                   <div className="grid h-full w-full place-items-center">
-                    <div className="text-xs font-semibold text-slate-500">SOLUTION ILLUSTRATION</div>
+                    <div className="text-xs font-semibold text-slate-500">{p.solutionIllustration}</div>
                   </div>
                 </div>
               </div>
@@ -210,10 +211,10 @@ export default function InvoiceEReceiptPage() {
                   <div className="mt-6 h-px w-full bg-slate-100" />
                   <div className="mt-6 grid grid-cols-2 gap-3 text-xs font-semibold text-slate-600">
                     <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Paperless workflow
+                      {p.solutionChipA}
                     </div>
                     <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Audit-ready storage
+                      {p.solutionChipB}
                     </div>
                   </div>
                 </div>
@@ -235,10 +236,10 @@ export default function InvoiceEReceiptPage() {
                   <div className="mt-6 h-px w-full bg-slate-100" />
                   <div className="mt-6 grid grid-cols-2 gap-3 text-xs font-semibold text-slate-600">
                     <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Remote approval
+                      {p.sigChipA}
                     </div>
                     <div className="rounded-2xl border border-slate-100 bg-white p-4">
-                      Tamper resistance
+                      {p.sigChipB}
                     </div>
                   </div>
                 </div>
@@ -251,12 +252,11 @@ export default function InvoiceEReceiptPage() {
               <div className="flex items-center gap-3">
                 <ShieldCheck className="h-5 w-5 text-sky-600" strokeWidth={1.6} />
                 <div className="text-sm font-bold tracking-tight text-slate-900">
-                  Trust by design
+                  {p.trustTitle}
                 </div>
               </div>
               <div className="mt-2 text-sm leading-6 text-slate-600">
-                Thin separators, clear information architecture, and enterprise-grade posture—
-                designed to feel calm, premium, and reliable.
+                {p.trustDesc}
               </div>
             </div>
           </Reveal>
@@ -268,11 +268,7 @@ export default function InvoiceEReceiptPage() {
         <Container>
           <Reveal>
             <div className="max-w-3xl">
-              <div className="flex items-center gap-2 text-xs font-semibold tracking-wide text-sky-600">
-                <TrendingDown className="h-4 w-4" strokeWidth={1.8} />
-                {p.compareTitle}
-              </div>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.compareTitle}
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-600">
@@ -284,7 +280,15 @@ export default function InvoiceEReceiptPage() {
           <div className="mt-10 grid grid-cols-1 gap-5">
             {p.metrics.map((m, idx) => (
               <Reveal key={m.k} delay={0.05 * idx}>
-                <StatBar label={m.k} current={m.current} withSystem={m.withSystem} />
+                <StatBar
+                  label={m.k}
+                  current={m.current}
+                  withSystem={m.withSystem}
+                  currentProcessLabel={p.currentProcess}
+                  withJapanSystemLabel={p.withJapanSystem}
+                  currentLabel={p.currentLabel}
+                  withSystemLabel={p.withSystemLabel}
+                />
               </Reveal>
             ))}
           </div>
@@ -293,10 +297,10 @@ export default function InvoiceEReceiptPage() {
             <div className="mt-10 flex flex-col items-start justify-between gap-4 rounded-3xl border border-slate-100 bg-white p-7 sm:flex-row sm:items-center">
               <div>
                 <div className="text-sm font-bold tracking-tight text-slate-900">
-                  Ready to modernize approvals?
+                  {p.ctaTitle}
                 </div>
                 <div className="mt-2 text-sm leading-6 text-slate-600">
-                  Start with a clean pilot—then scale with confidence.
+                  {p.ctaDesc}
                 </div>
               </div>
               <Link
@@ -313,4 +317,3 @@ export default function InvoiceEReceiptPage() {
     </div>
   );
 }
-

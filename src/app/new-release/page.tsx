@@ -15,7 +15,7 @@ export default function NewReleasePage() {
     /* พื้นหลังหลักเป็นสีฟ้าอ่อน (bg-sky-50) */
     <div className="relative overflow-hidden py-14 sm:py-16 bg-sky-50 min-h-screen">
       <PageTitle title={p.metaTitle} />
-      
+
       <Container>
         {/* --- ส่วนหัว Hero Section ปรับเป็นสีขาว --- */}
         <Reveal>
@@ -50,14 +50,11 @@ export default function NewReleasePage() {
             <div className="border-b border-slate-200 bg-white px-6 py-8 sm:px-10 sm:py-10">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div className="max-w-2xl">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sky-600">
-                    e-Tax Invoice & e-Receipt
-                  </p>
                   <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                    Refers to the use of tax invoices,
+                    {p.eTaxHeading}
                   </h2>
                   <p className="mt-3 text-sm leading-6 text-slate-600">
-                    Tax Invoice (Paper medium)
+                    {p.taxInvoiceSubtitle}
                   </p>
                 </div>
                 <div className="shrink-0">
@@ -78,28 +75,28 @@ export default function NewReleasePage() {
               {/* ตารางคำนวณ */}
               <div className="grid gap-3 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700 sm:text-base">
                 <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 font-semibold text-slate-900">
-                  <div>option</div>
-                  <div className="text-right">Value</div>
+                  <div>{p.costTable.option}</div>
+                  <div className="text-right">{p.costTable.value}</div>
                 </div>
                 <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>Use paper</div>
-                  <div className="text-right">0.8 Baht/set</div>
+                  <div>{p.costTable.usePaper}</div>
+                  <div className="text-right">{p.costTable.usePaperVal}</div>
                 </div>
                 <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>Printing fee</div>
-                  <div className="text-right">2 Baht/set</div>
+                  <div>{p.costTable.printingFee}</div>
+                  <div className="text-right">{p.costTable.printingFeeVal}</div>
                 </div>
                 <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>Storage material</div>
-                  <div className="text-right">0.02 Baht/set</div>
+                  <div>{p.costTable.storageMaterial}</div>
+                  <div className="text-right">{p.costTable.storageMaterialVal}</div>
                 </div>
                 <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>Delivery fee (EMS)</div>
-                  <div className="text-right">37 Baht/set</div>
+                  <div>{p.costTable.deliveryFee}</div>
+                  <div className="text-right">{p.costTable.deliveryFeeVal}</div>
                 </div>
                 <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div className="font-semibold text-red-600">Total</div>
-                  <div className="text-right font-semibold text-red-600">39.82 Baht</div>
+                  <div className="font-semibold text-red-600">{p.costTable.total}</div>
+                  <div className="text-right font-semibold text-red-600">{p.costTable.totalVal}</div>
                 </div>
               </div>
 
@@ -111,13 +108,13 @@ export default function NewReleasePage() {
                   </div>
                   <div className="min-w-0">
                     <div className="font-semibold text-slate-900">
-                      Monthly cost when the circulation is 1,000 copies / month
+                      {p.monthlyCostLabel}
                     </div>
                     <div className="mt-3 text-base font-bold leading-6 text-red-600">
-                      39.82 Baht x 1,000 = 39,820 Baht / month
+                      {p.monthlyCostValue}
                     </div>
                     <div className="mt-2 text-sm font-semibold leading-6 text-red-600">
-                      Monthly 39,820 baht + labor cost reduction!
+                      {p.monthlyCostReduction}
                     </div>
                   </div>
                 </div>
@@ -128,7 +125,7 @@ export default function NewReleasePage() {
                   href="/e-tax"
                   className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
                 >
-                  READ MORE
+                  {t.common.readMore}
                 </Link>
               </div>
             </div>
@@ -172,7 +169,7 @@ export default function NewReleasePage() {
                   href="/my-log-star"
                   className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-slate-800 hover:-translate-y-1 active:scale-95"
                 >
-                  READ MORE
+                  {t.common.readMore}
                 </Link>
               </div>
             </div>

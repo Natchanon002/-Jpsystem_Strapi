@@ -20,7 +20,7 @@ export default function CompanyProfilePage() {
         {/* พื้นที่สำหรับใส่รูปพื้นหลัง */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/topB_company_profile.jpg" 
+            src="/topB_company_profile.jpg"
             alt="Company background"
             fill
             className="object-cover"
@@ -55,9 +55,6 @@ export default function CompanyProfilePage() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-center">
             <Reveal>
               <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_28px_90px_rgba(15,23,42,0.10)] ring-1 ring-white/70">
-                <div className="text-xs font-semibold tracking-wide text-sky-600">
-                  {p.about.title}
-                </div>
                 <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                   {p.about.title}
                 </h2>
@@ -92,9 +89,6 @@ export default function CompanyProfilePage() {
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <div className="text-xs font-semibold tracking-wide text-sky-600">
-                {p.infoTitle}
-              </div>
               <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.infoTitle}
               </h2>
@@ -125,9 +119,6 @@ export default function CompanyProfilePage() {
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <div className="text-xs font-semibold tracking-wide text-sky-600">
-                {p.servicesTitle}
-              </div>
               <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {p.servicesTitle}
               </h2>

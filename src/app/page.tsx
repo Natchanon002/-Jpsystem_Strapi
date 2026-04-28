@@ -33,11 +33,7 @@ export default function Home() {
                 Japan System
               </p>
               <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
-                Japan System では貴社の DX (デジタルトランスフォーメーション)
-                <br />
-                を
-                <br />
-                お手伝いいたします。
+                {t.pages.home.hero.title}
               </h1>
             </div>
 
@@ -55,7 +51,7 @@ export default function Home() {
             >
               {/* วงกลมพื้นหลังสไตล์ Glassmorphism */}
               <div className="absolute inset-0 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20 group-hover:border-white/50 shadow-xl" />
-              
+
               {/* ลูกศรที่ขยับเด้งไปมา */}
               <ChevronDown className="relative h-8 w-8 text-white animate-bounce transition-transform duration-300 group-hover:translate-y-1" />
             </button>
@@ -69,9 +65,6 @@ export default function Home() {
           <Reveal>
             <div className="flex items-end justify-between gap-6">
               <div>
-                <div className="text-xs font-semibold tracking-wide text-sky-600">
-                  {t.pages.home.services.title}
-                </div>
                 <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                   {t.pages.home.services.title}
                 </h2>
@@ -101,8 +94,8 @@ export default function Home() {
                           idx === 0
                             ? "/iconcpu.png"
                             : idx === 1
-                            ? "/iconfile-text.png"
-                            : "/iconchart-no-axes-combined.png"
+                              ? "/iconfile-text.png"
+                              : "/iconchart-no-axes-combined.png"
                         }
                         alt="Service icon"
                         width={24}

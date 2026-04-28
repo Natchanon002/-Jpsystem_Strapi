@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { type ReactNode, useState } from "react";
@@ -45,7 +45,7 @@ function AccordionItem({
         <span>{title}</span>
         <span className="text-slate-500">{isOpen ? "−" : "+"}</span>
       </button>
-      {isOpen && <div className="border-t border-slate-100 px-6 py-5 text-sm leading-7 text-slate-600 bg-white">{children}</div>}
+      {isOpen && <div className="border-t border-slate-100 px-6 py-5 text-sm leading-7 text-slate-600 bg-white whitespace-pre-line">{children}</div>}
     </div>
   );
 }
@@ -54,67 +54,6 @@ export default function MyLogStarPage() {
   const { t } = useLanguage();
   const p = t.pages.myLogStar;
   const [openSection, setOpenSection] = useState("fileServer");
-
-  const sections = [
-    {
-      id: "fileServer",
-      title: "My log Star FileServer",
-      content: (
-        <>
-          <p>
-            Pinpoint monitoring of important servers, low price & high functionality! File server access log / audit log management. Log monitoring is indispensable for measures against information leakage.
-          </p>
-          <p className="mt-4">
-            For companies that own many servers or small and medium-sized companies with limited system resources, it can be difficult to monitor every system. MylogStar FileServer narrows the monitoring target to the file server where confidential information is stored and installs directly on that server.
-          </p>
-          <p className="mt-4">
-            It monitors data input/output and user operations, maintaining security while allowing audit log acquisition. Operations are recorded chronologically as audit logs, with no need for a separate management server or PC agent.
-          </p>
-        </>
-      ),
-    },
-    {
-      id: "desktop",
-      title: "My log Star Desktop",
-      content: (
-        <>
-          <p>
-            "Log management" & "device control" that can be done immediately on a stand-alone PC or a small base. MylogStar Desktop is ideal for environments with a small number of target PCs, including PCs that cannot connect to the network.
-          </p>
-          <p className="mt-4">
-            No management server is required, and it can be installed directly on the target PC. With top-class log collection power, operation logs on the PC can be uprooted and managed as a trail.
-          </p>
-        </>
-      ),
-    },
-    {
-      id: "standalone",
-      title: "MylogStar 4 Standalone Manager",
-      content: (
-        <p>
-          MylogStar 4 Standalone Manager lets you centrally collect, manage, and view logs from multiple machines running Desktop. SQL Server is required to use Standalone Manager.
-        </p>
-      ),
-    },
-    {
-      id: "console",
-      title: "Easy-to-understand and simple management console",
-      content: (
-        <p>
-          The management console of MylogStar Desktop is designed to be simple and easy to understand, even for personnel who are not familiar with IT.
-        </p>
-      ),
-    },
-    {
-      id: "deviceControl",
-      title: "Device control",
-      content: (
-        <p>
-          MylogStar Desktop's Access Control Option not only prohibits USB use uniformly, but also allows detailed security policies like allow, prohibit, and read-only for USB storage.
-        </p>
-      ),
-    },
-  ];
 
   const toggleSection = (id: string) => {
     setOpenSection(openSection === id ? "" : id);
@@ -128,10 +67,10 @@ export default function MyLogStarPage() {
         <Reveal>
           <div className="max-w-3xl">
             <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              My log star
+              {p.heroTitle}
             </h1>
             <p className="mt-3 text-base leading-7 text-slate-600">
-              What is log management? When you use a personal computer, information such as what software you used and which file you opened is recorded on your computer... (logs) contains a great deal of information, and a closer look reveals who, when, and what they were doing on their computer.
+              {p.heroDesc}
             </p>
           </div>
         </Reveal>
@@ -141,8 +80,7 @@ export default function MyLogStarPage() {
             <div className="space-y-6">
               {/* ส่วนวิดีโอ */}
               <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                <div className="text-xs font-semibold tracking-wide text-sky-600 uppercase">{p.videoTitle}</div>
-                <div className="mt-4 overflow-hidden rounded-3xl border border-slate-100 bg-slate-900/5">
+                <div className="overflow-hidden rounded-3xl border border-slate-100 bg-slate-900/5">
                   <div className="relative aspect-video w-full bg-black">
                     <iframe
                       className="absolute inset-0 h-full w-full"
@@ -186,18 +124,18 @@ export default function MyLogStarPage() {
                 </div>
               </div>
               {/* การ์ดฟีเจอร์ */}
-              <FeatureCard title="MylogStar Features">
+              <FeatureCard title={p.featureTitle}>
                 <div className="space-y-6">
                   <div>
-                    <div className="font-semibold text-slate-900">Log collection power</div>
+                    <div className="font-semibold text-slate-900">{p.featureLogCollectionTitle}</div>
                     <div className="mt-2 text-sm leading-7 text-slate-600">
-                      Acquires logs at the kernel level of the OS, grasping operations that cannot be acquired by other log management products.
+                      {p.featureLogCollectionDesc}
                     </div>
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900">Log availability</div>
+                    <div className="font-semibold text-slate-900">{p.featureLogAvailabilityTitle}</div>
                     <div className="mt-2 text-sm leading-7 text-slate-600">
-                      Highly accurate logs for information leakage countermeasures and business improvement.
+                      {p.featureLogAvailabilityDesc}
                     </div>
                   </div>
                 </div>
@@ -208,7 +146,7 @@ export default function MyLogStarPage() {
 
         {/* Accordion ส่วนรายละเอียดเพิ่มเติม */}
         <div className="mt-12 space-y-4">
-          {sections.map((section) => (
+          {p.accordion.map((section) => (
             <AccordionItem
               key={section.id}
               title={section.title}

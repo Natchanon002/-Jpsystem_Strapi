@@ -122,7 +122,7 @@ export default function ContactPage() {
                     type="submit"
                     className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-xl transition-all hover:-translate-y-1"
                   >
-                    {sent ? "Sent" : t.common.send}
+                    {sent ? t.common.sent : t.common.send}
                   </button>
                 </div>
               </form>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <Mail className="mt-0.5 h-4 w-4 text-sky-600" strokeWidth={1.8} />
                     <div>
-                      <div className="text-xs font-semibold tracking-wide text-slate-500">Email</div>
+                      <div className="text-xs font-semibold tracking-wide text-slate-500">{t.common.email}</div>
                       <a href={`mailto:${p.office.email}`} className="text-sm font-semibold text-slate-900 hover:text-sky-600">
                         {p.office.email}
                       </a>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <Phone className="mt-0.5 h-4 w-4 text-sky-600" strokeWidth={1.8} />
                     <div>
-                      <div className="text-xs font-semibold tracking-wide text-slate-500">Phone</div>
+                      <div className="text-xs font-semibold tracking-wide text-slate-500">{t.common.phone}</div>
                       <a href={`tel:${p.office.phone}`} className="text-sm font-semibold text-slate-900 hover:text-sky-600">
                         {p.office.phone}
                       </a>
@@ -157,11 +157,9 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <MapPin className="mt-0.5 h-4 w-4 text-sky-600" strokeWidth={1.8} />
                     <div>
-                      <div className="text-xs font-semibold tracking-wide text-slate-500">Address</div>
+                      <div className="text-xs font-semibold tracking-wide text-slate-500">{t.common.address}</div>
                       <div className="text-sm font-semibold text-slate-900">
-                        28th Fl., 253 Asoke Building,<br />
-                        Sukhumvit 21 Rd., Khlong Toei Nuea,<br />
-                        Watthana, Bangkok 10110.
+                        {t.common.addressValue}
                       </div>
                     </div>
                   </div>

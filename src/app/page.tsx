@@ -19,7 +19,8 @@ export default function Home() {
       {/* --- Section 1: Hero --- */}
       <section className="relative border-b border-slate-100">
         <div className="relative overflow-hidden">
-          <div className="aspect-[16/9] w-full lg:aspect-[21/9]">
+          {/* Responsive aspect ratio: taller on mobile, wider on desktop */}
+          <div className="aspect-[9/14] w-full sm:aspect-[16/10] lg:aspect-[21/9]">
             <img
               src="/homebg.jpg"
               alt="Home background"
@@ -30,46 +31,46 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-slate-950/50 to-slate-950/70" />
           <div className="absolute inset-0 bg-gradient-to-r from-sky-900/20 to-indigo-900/10" />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <div className="max-w-3xl">
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-5 sm:px-6 text-center">
+            <div className="max-w-3xl w-full">
               {/* Animated badge */}
               <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 sm:px-4 sm:py-1.5 backdrop-blur-md">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-400" />
                   </span>
-                  <span className="text-xs font-semibold tracking-[0.2em] text-white/90 uppercase">
+                  <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] text-white/90 uppercase">
                     Japan System
                   </span>
                 </div>
               </Reveal>
 
               <Reveal delay={0.1}>
-                <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-2xl">
+                <h1 className="mt-4 sm:mt-6 text-2xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-2xl">
                   {t.pages.home.hero.title}
                 </h1>
               </Reveal>
 
               <Reveal delay={0.2}>
-                <p className="mt-4 text-base text-white/70 max-w-2xl mx-auto sm:text-lg">
+                <p className="mt-3 sm:mt-4 text-sm text-white/70 max-w-2xl mx-auto sm:text-base lg:text-lg">
                   {t.pages.home.hero.subtitle}
                 </p>
               </Reveal>
 
               {/* CTA Buttons */}
               <Reveal delay={0.3}>
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <Link
                     href="/it-system"
-                    className="shimmer inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-xl transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+                    className="shimmer w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-white px-5 sm:px-6 py-3 text-sm font-semibold text-slate-900 shadow-xl transition-all hover:-translate-y-0.5 hover:shadow-2xl"
                   >
                     {t.pages.home.hero.ctaPrimary}
                     <span className="ml-2">→</span>
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
+                    className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-5 sm:px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
                   >
                     {t.nav.contact}
                   </Link>
@@ -87,39 +88,39 @@ export default function Home() {
                     target.scrollIntoView({ behavior: "smooth", block: "start" });
                   }
                 }}
-                className="mt-12 group relative inline-flex items-center justify-center h-14 w-14"
+                className="mt-8 sm:mt-12 group relative inline-flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14"
                 aria-label="Scroll to services"
               >
                 <div className="absolute inset-0 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-white/15 group-hover:border-white/40" />
-                <ChevronDown className="relative h-6 w-6 text-white animate-bounce" />
+                <ChevronDown className="relative h-5 w-5 sm:h-6 sm:w-6 text-white animate-bounce" />
               </button>
             </Reveal>
           </div>
 
-          {/* Decorative floating orbs */}
-          <div className="absolute -right-20 top-1/4 h-40 w-40 rounded-full bg-sky-500/10 blur-3xl animate-float" />
-          <div className="absolute -left-16 bottom-1/3 h-32 w-32 rounded-full bg-indigo-500/10 blur-3xl animate-float-delayed" />
+          {/* Decorative floating orbs — hidden on very small screens for performance */}
+          <div className="hidden sm:block absolute -right-20 top-1/4 h-40 w-40 rounded-full bg-sky-500/10 blur-3xl animate-float" />
+          <div className="hidden sm:block absolute -left-16 bottom-1/3 h-32 w-32 rounded-full bg-indigo-500/10 blur-3xl animate-float-delayed" />
         </div>
       </section>
 
       {/* --- Section 2: Services --- */}
-      <section id="services" className="relative py-20 sm:py-24 overflow-hidden">
+      <section id="services" className="relative py-14 sm:py-20 lg:py-24 overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] w-2/3 bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
-        <div className="absolute -right-32 top-20 h-64 w-64 rounded-full bg-sky-100/50 blur-3xl" />
-        <div className="absolute -left-32 bottom-20 h-64 w-64 rounded-full bg-indigo-100/30 blur-3xl" />
+        <div className="hidden sm:block absolute -right-32 top-20 h-64 w-64 rounded-full bg-sky-100/50 blur-3xl" />
+        <div className="hidden sm:block absolute -left-32 bottom-20 h-64 w-64 rounded-full bg-indigo-100/30 blur-3xl" />
 
         <Container>
           <div className="relative">
             <Reveal>
-              <div className="flex items-end justify-between gap-6">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 shadow-sm mb-4">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 shadow-sm mb-3 sm:mb-4">
                     <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
                     Services
                   </div>
-                  <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl">
                     {t.pages.home.services.title}
                   </h2>
                 </div>
@@ -134,7 +135,7 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 sm:mt-10 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {t.pages.home.services.items.slice(0, 3).map((it, idx) => {
                 const hrefs = ["/it-system", "/e-tax", "/marketing"];
                 return (
@@ -164,7 +165,7 @@ export default function Home() {
               })}
             </div>
 
-            <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:justify-center sm:gap-5 lg:grid-cols-2 lg:px-20">
+            <div className="mt-4 sm:mt-5 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:px-20">
               {t.pages.home.services.items.slice(3, 5).map((it, idx) => {
                 const hrefs = ["/my-log-star", "/new-release"];
                 return (

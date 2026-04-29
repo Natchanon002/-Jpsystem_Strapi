@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -53,6 +54,7 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </main>
           <Footer />
+          <ScrollToTop />
         </LanguageProvider>
       </body>
     </html>

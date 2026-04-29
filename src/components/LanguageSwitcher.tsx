@@ -7,7 +7,7 @@ export function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-slate-200 bg-white/60 p-1 backdrop-blur">
+    <div className="flex items-center gap-0.5 sm:gap-1 rounded-full border border-slate-200 bg-white/60 p-0.5 sm:p-1 backdrop-blur">
       {languages.map((l) => {
         const active = l.code === lang;
         return (
@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
             type="button"
             onClick={() => setLang(l.code)}
             className={
-              "rounded-full px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors " +
+              "rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] sm:text-xs font-semibold tracking-wide transition-colors " +
               (active
                 ? "bg-slate-900 text-white"
                 : "text-slate-600 hover:bg-slate-100")
@@ -30,4 +30,3 @@ export function LanguageSwitcher() {
     </div>
   );
 }
-

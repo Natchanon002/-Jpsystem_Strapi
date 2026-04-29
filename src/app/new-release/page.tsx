@@ -12,15 +12,13 @@ export default function NewReleasePage() {
   const p = t.pages.newRelease;
 
   return (
-    /* พื้นหลังหลักเป็นสีฟ้าอ่อน (bg-sky-50) */
-    <div className="relative overflow-hidden py-14 sm:py-16 bg-sky-50 min-h-screen">
+    <div className="relative overflow-hidden py-10 sm:py-14 md:py-16 bg-sky-50 min-h-screen">
       <PageTitle title={p.metaTitle} />
 
       <Container>
-        {/* --- ส่วนหัว Hero Section ปรับเป็นสีขาว --- */}
+        {/* --- ส่วนหัว Hero Section --- */}
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900 px-8 py-16 sm:px-12 sm:py-20 border border-slate-100 shadow-xl">
-            {/* พื้นที่สำหรับใส่รูปพื้นหลัง */}
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-slate-900 px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-20 border border-slate-100 shadow-xl">
             <div className="absolute inset-0 z-0">
               <Image
                 src="/topBG-new-releasesss.jpg"
@@ -29,15 +27,14 @@ export default function NewReleasePage() {
                 className="object-cover"
                 priority
               />
-              {/* Overlay มืดบางๆ เพื่อให้ตัวหนังสือสีขาวอ่านง่ายขึ้น */}
               <div className="absolute inset-0 bg-black/20" />
             </div>
 
             <div className="relative z-10 mx-auto max-w-2xl text-center text-white">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl drop-shadow-lg">
+              <h1 className="text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl drop-shadow-lg">
                 {p.title}
               </h1>
-              <p className="mt-4 text-lg leading-8 text-white/80 font-normal drop-shadow-md">
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-white/80 font-normal drop-shadow-md">
                 {p.subtitle}
               </p>
             </div>
@@ -46,19 +43,19 @@ export default function NewReleasePage() {
 
         {/* --- ส่วนเนื้อหา e-Tax Section --- */}
         <Reveal delay={0.06}>
-          <div className="mt-10 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_80px_rgba(15,23,42,0.06)]">
-            <div className="border-b border-slate-200 bg-white px-6 py-8 sm:px-10 sm:py-10">
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mt-6 sm:mt-10 overflow-hidden rounded-2xl sm:rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_80px_rgba(15,23,42,0.06)]">
+            <div className="border-b border-slate-200 bg-white px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
+              <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div className="max-w-2xl">
-                  <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">
                     {p.eTaxHeading}
                   </h2>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                  <p className="mt-2 sm:mt-3 text-sm leading-6 text-slate-600">
                     {p.taxInvoiceSubtitle}
                   </p>
                 </div>
                 <div className="shrink-0">
-                  <div className="aspect-[5/3] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 lg:w-56">
+                  <div className="aspect-[5/3] w-full overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-slate-50 lg:w-56">
                     <Image
                       src="/topimg-new-release.jpg"
                       alt="New release top visual"
@@ -71,59 +68,59 @@ export default function NewReleasePage() {
               </div>
             </div>
 
-            <div className="bg-white px-6 py-8 sm:px-10 sm:py-10">
+            <div className="bg-white px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
               {/* ตารางคำนวณ */}
-              <div className="grid gap-3 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-700 sm:text-base">
-                <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 font-semibold text-slate-900">
-                  <div>{p.costTable.option}</div>
-                  <div className="text-right">{p.costTable.value}</div>
+              <div className="grid gap-2 sm:gap-3 rounded-2xl sm:rounded-3xl border border-slate-200 bg-slate-50 p-4 sm:p-6 text-sm text-slate-700 sm:text-base">
+                <div className="grid grid-cols-[1fr_auto] sm:grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-3 sm:gap-4 font-semibold text-slate-900">
+                  <div className="text-sm sm:text-base">{p.costTable.option}</div>
+                  <div className="text-right text-sm sm:text-base">{p.costTable.value}</div>
                 </div>
-                <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>{p.costTable.usePaper}</div>
-                  <div className="text-right">{p.costTable.usePaperVal}</div>
+                <div className="grid grid-cols-[1fr_auto] sm:grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-3 sm:gap-4 border-t border-slate-200 pt-3 sm:pt-4">
+                  <div className="text-sm sm:text-base">{p.costTable.usePaper}</div>
+                  <div className="text-right text-sm sm:text-base">{p.costTable.usePaperVal}</div>
                 </div>
-                <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>{p.costTable.printingFee}</div>
-                  <div className="text-right">{p.costTable.printingFeeVal}</div>
+                <div className="grid grid-cols-[1fr_auto] sm:grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-3 sm:gap-4 border-t border-slate-200 pt-3 sm:pt-4">
+                  <div className="text-sm sm:text-base">{p.costTable.printingFee}</div>
+                  <div className="text-right text-sm sm:text-base">{p.costTable.printingFeeVal}</div>
                 </div>
-                <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>{p.costTable.storageMaterial}</div>
-                  <div className="text-right">{p.costTable.storageMaterialVal}</div>
+                <div className="grid grid-cols-[1fr_auto] sm:grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-3 sm:gap-4 border-t border-slate-200 pt-3 sm:pt-4">
+                  <div className="text-sm sm:text-base">{p.costTable.storageMaterial}</div>
+                  <div className="text-right text-sm sm:text-base">{p.costTable.storageMaterialVal}</div>
                 </div>
-                <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div>{p.costTable.deliveryFee}</div>
-                  <div className="text-right">{p.costTable.deliveryFeeVal}</div>
+                <div className="grid grid-cols-[1fr_auto] sm:grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-3 sm:gap-4 border-t border-slate-200 pt-3 sm:pt-4">
+                  <div className="text-sm sm:text-base">{p.costTable.deliveryFee}</div>
+                  <div className="text-right text-sm sm:text-base">{p.costTable.deliveryFeeVal}</div>
                 </div>
-                <div className="grid grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-4 border-t border-slate-200 pt-4">
-                  <div className="font-semibold text-red-600">{p.costTable.total}</div>
-                  <div className="text-right font-semibold text-red-600">{p.costTable.totalVal}</div>
+                <div className="grid grid-cols-[1fr_auto] sm:grid-cols-[minmax(160px,1fr)_minmax(120px,auto)] gap-3 sm:gap-4 border-t border-slate-200 pt-3 sm:pt-4">
+                  <div className="font-semibold text-red-600 text-sm sm:text-base">{p.costTable.total}</div>
+                  <div className="text-right font-semibold text-red-600 text-sm sm:text-base">{p.costTable.totalVal}</div>
                 </div>
               </div>
 
               {/* ส่วนสรุปรายเดือน */}
-              <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_36px_rgba(15,23,42,0.06)] text-sm text-slate-700 sm:text-base">
-                <div className="flex items-start gap-4">
-                  <div className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-900">
-                    <span className="text-lg font-bold">£</span>
+              <div className="mt-6 sm:mt-8 rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-[0_16px_36px_rgba(15,23,42,0.06)] text-sm text-slate-700 sm:text-base">
+                <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                  <div className="grid h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 place-items-center rounded-xl sm:rounded-2xl border border-slate-200 bg-slate-50 text-slate-900">
+                    <span className="text-base sm:text-lg font-bold">£</span>
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 w-full">
                     <div className="font-semibold text-slate-900">
                       {p.monthlyCostLabel}
                     </div>
-                    <div className="mt-3 text-base font-bold leading-6 text-red-600">
+                    <div className="mt-2 sm:mt-3 text-sm sm:text-base font-bold leading-6 text-red-600">
                       {p.monthlyCostValue}
                     </div>
-                    <div className="mt-2 text-sm font-semibold leading-6 text-red-600">
+                    <div className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold leading-6 text-red-600">
                       {p.monthlyCostReduction}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 flex justify-end">
+              <div className="mt-5 sm:mt-6 flex justify-center sm:justify-end">
                 <Link
                   href="/e-tax"
-                  className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800 active:scale-95"
                 >
                   {t.common.readMore}
                 </Link>
@@ -132,11 +129,11 @@ export default function NewReleasePage() {
           </div>
         </Reveal>
 
-        {/* --- ส่วนวิดีโอและรูปภาพด้านล่าง (ลบคำหัวข้อ Clip/Image ออกแล้ว) --- */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.3fr_0.9fr]">
+        {/* --- ส่วนวิดีโอและรูปภาพด้านล่าง --- */}
+        <div className="mt-6 sm:mt-10 grid gap-5 sm:gap-6 lg:grid-cols-[1.3fr_0.9fr]">
           <Reveal delay={0.08}>
-            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
-              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 pb-[56.25%]">
+            <div className="rounded-2xl sm:rounded-[1.75rem] border border-slate-200 bg-white p-4 sm:p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
+              <div className="relative overflow-hidden rounded-xl sm:rounded-3xl border border-slate-200 bg-slate-50 pb-[56.25%]">
                 <iframe
                   className="absolute inset-0 h-full w-full"
                   src="https://www.youtube.com/embed/R8GhVnNnbV8?si=-sLcHVTQTR_vjEMm"
@@ -151,9 +148,8 @@ export default function NewReleasePage() {
           </Reveal>
 
           <Reveal>
-            <div className="relative rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] flex flex-col h-full">
-              {/* กล่องรูปภาพ */}
-              <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
+            <div className="relative rounded-2xl sm:rounded-[1.75rem] border border-slate-200 bg-white p-4 sm:p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] flex flex-col h-full">
+              <div className="overflow-hidden rounded-xl sm:rounded-3xl border border-slate-200 bg-slate-50">
                 <Image
                   src="/botimg_new-release.png"
                   alt="Bottom new release visual"
@@ -163,11 +159,10 @@ export default function NewReleasePage() {
                 />
               </div>
 
-              {/* ปุ่ม READ MORE แยกออกมาอยู่ด้านล่างและชิดขวา */}
-              <div className="mt-6 flex justify-end">
+              <div className="mt-4 sm:mt-6 flex justify-center sm:justify-end">
                 <Link
                   href="/my-log-star"
-                  className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-slate-800 hover:-translate-y-1 active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-slate-900 px-5 sm:px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-slate-800 hover:-translate-y-1 active:scale-95"
                 >
                   {t.common.readMore}
                 </Link>

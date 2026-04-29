@@ -16,7 +16,7 @@ export default function CompanyProfilePage() {
       <PageTitle title={p.metaTitle} />
 
       {/* Section 1: Hero */}
-      <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-white">
+      <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
         <div className="absolute inset-0 z-0">
           <Image
             src="/topB_company_profile.jpg"
@@ -31,12 +31,12 @@ export default function CompanyProfilePage() {
           <Container>
             <div className="max-w-2xl">
               <Reveal>
-                <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
                   {p.title}
                 </h1>
               </Reveal>
               <Reveal delay={0.08}>
-                <p className="mt-5 text-lg font-normal leading-8 text-slate-700">
+                <p className="mt-3 sm:mt-5 text-base sm:text-lg font-normal leading-7 sm:leading-8 text-slate-700">
                   {p.subtitle}
                 </p>
               </Reveal>
@@ -46,27 +46,27 @@ export default function CompanyProfilePage() {
       </section>
 
       {/* Section 2: About */}
-      <section className="relative py-14 sm:py-16 overflow-hidden">
+      <section className="relative py-10 sm:py-14 md:py-16 overflow-hidden">
         {/* Background decorations */}
-        <div className="absolute -right-32 top-20 h-64 w-64 rounded-full bg-sky-100/40 blur-3xl" />
-        <div className="absolute -left-32 bottom-20 h-48 w-48 rounded-full bg-indigo-100/30 blur-3xl" />
+        <div className="hidden sm:block absolute -right-32 top-20 h-64 w-64 rounded-full bg-sky-100/40 blur-3xl" />
+        <div className="hidden sm:block absolute -left-32 bottom-20 h-48 w-48 rounded-full bg-indigo-100/30 blur-3xl" />
 
         <Container>
-          <div className="relative grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-center">
+          <div className="relative grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-2 lg:items-center">
             <Reveal>
-              <div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_28px_90px_rgba(15,23,42,0.08)] card-glow gradient-border">
-                <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-6 sm:p-8 shadow-[0_28px_90px_rgba(15,23,42,0.08)] card-glow gradient-border">
+                <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">
                   {p.about.title}
                 </h2>
-                <div className="mt-4 h-0.5 w-16 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
-                <p className="mt-5 text-base font-light leading-7 text-slate-600">
+                <div className="mt-3 sm:mt-4 h-0.5 w-12 sm:w-16 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
+                <p className="mt-4 sm:mt-5 text-sm sm:text-base font-light leading-6 sm:leading-7 text-slate-600">
                   {p.about.body}
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="group relative overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.08)]">
+              <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.08)]">
                 <div
                   className="aspect-[16/10] w-full transition-transform duration-700 group-hover:scale-[1.03]"
                   style={{
@@ -86,27 +86,27 @@ export default function CompanyProfilePage() {
       </section>
 
       {/* Section 3: Corporate Information */}
-      <section className="relative border-y border-slate-100 bg-gradient-to-br from-slate-50 to-sky-50/30 py-14 sm:py-16 overflow-hidden">
+      <section className="relative border-y border-slate-100 bg-gradient-to-br from-slate-50 to-sky-50/30 py-10 sm:py-14 md:py-16 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] w-2/3 bg-gradient-to-r from-transparent via-sky-200/50 to-transparent" />
 
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">
                 {p.infoTitle}
               </h2>
             </div>
           </Reveal>
 
-          <div className="mt-10 overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.06)]">
+          <div className="mt-6 sm:mt-10 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-100 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.06)]">
             <div className="divide-y divide-slate-100">
               {p.info.map((r, idx) => (
                 <Reveal key={r.k} delay={0.04 * idx}>
-                  <div className="grid grid-cols-1 gap-2 p-6 sm:grid-cols-3 sm:items-center transition-colors duration-300 hover:bg-sky-50/30">
+                  <div className="grid grid-cols-1 gap-1 sm:gap-2 p-4 sm:p-6 sm:grid-cols-3 sm:items-center transition-colors duration-300 hover:bg-sky-50/30">
                     <div className="text-xs font-semibold tracking-wide text-slate-500">
                       {r.k}
                     </div>
-                    <div className="sm:col-span-2 text-sm font-semibold text-slate-900">
+                    <div className="sm:col-span-2 text-sm font-semibold text-slate-900 break-words">
                       {r.v}
                     </div>
                   </div>
@@ -118,27 +118,27 @@ export default function CompanyProfilePage() {
       </section>
 
       {/* Section 4: Services */}
-      <section className="relative py-14 sm:py-16 overflow-hidden">
-        <div className="absolute -right-20 bottom-10 h-48 w-48 rounded-full bg-sky-100/30 blur-3xl" />
+      <section className="relative py-10 sm:py-14 md:py-16 overflow-hidden">
+        <div className="hidden sm:block absolute -right-20 bottom-10 h-48 w-48 rounded-full bg-sky-100/30 blur-3xl" />
 
         <Container>
           <Reveal>
             <div className="max-w-2xl">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">
                 {p.servicesTitle}
               </h2>
             </div>
           </Reveal>
 
-          <div className="mt-10 rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_28px_90px_rgba(15,23,42,0.06)] gradient-border">
-            <ul className="space-y-5">
+          <div className="mt-6 sm:mt-10 rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-5 sm:p-8 shadow-[0_28px_90px_rgba(15,23,42,0.06)] gradient-border">
+            <ul className="space-y-3 sm:space-y-5">
               {p.services.map((s, idx) => (
                 <Reveal key={s} delay={0.04 * idx}>
-                  <li className="group flex items-start gap-4 rounded-2xl p-3 -mx-3 transition-colors duration-300 hover:bg-sky-50/40">
-                    <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-indigo-500 shadow-md shadow-sky-500/20 transition-transform duration-300 group-hover:scale-110">
-                      <Check className="h-4 w-4 text-white" strokeWidth={2.5} />
+                  <li className="group flex items-start gap-3 sm:gap-4 rounded-xl sm:rounded-2xl p-2 sm:p-3 -mx-2 sm:-mx-3 transition-colors duration-300 hover:bg-sky-50/40">
+                    <span className="mt-0.5 grid h-7 w-7 sm:h-8 sm:w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-indigo-500 shadow-md shadow-sky-500/20 transition-transform duration-300 group-hover:scale-110">
+                      <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" strokeWidth={2.5} />
                     </span>
-                    <span className="text-base leading-7 text-slate-700">
+                    <span className="text-sm sm:text-base leading-6 sm:leading-7 text-slate-700">
                       {s}
                     </span>
                   </li>

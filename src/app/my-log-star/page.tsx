@@ -17,9 +17,9 @@ function Chip({ children }: { children: string }) {
 
 function FeatureCard({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
+    <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-5 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
       <div className="text-sm font-bold tracking-tight text-slate-900">{title}</div>
-      <div className="mt-4 text-sm leading-7 text-slate-600">{children}</div>
+      <div className="mt-3 sm:mt-4 text-sm leading-6 sm:leading-7 text-slate-600">{children}</div>
     </div>
   );
 }
@@ -36,16 +36,16 @@ function AccordionItem({
   children: ReactNode;
 }) {
   return (
-    <div className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_16px_56px_rgba(15,23,42,0.06)]">
+    <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-100 bg-white shadow-[0_16px_56px_rgba(15,23,42,0.06)]">
       <button
         type="button"
-        className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-lg font-semibold text-slate-900 transition-colors hover:bg-slate-50"
+        className="flex w-full items-center justify-between gap-3 sm:gap-4 px-4 py-4 sm:px-6 sm:py-5 text-left text-base sm:text-lg font-semibold text-slate-900 transition-colors hover:bg-slate-50"
         onClick={onToggle}
       >
         <span>{title}</span>
-        <span className="text-slate-500">{isOpen ? "−" : "+"}</span>
+        <span className="text-slate-500 shrink-0">{isOpen ? "−" : "+"}</span>
       </button>
-      {isOpen && <div className="border-t border-slate-100 px-6 py-5 text-sm leading-7 text-slate-600 bg-white whitespace-pre-line">{children}</div>}
+      {isOpen && <div className="border-t border-slate-100 px-4 py-4 sm:px-6 sm:py-5 text-sm leading-6 sm:leading-7 text-slate-600 bg-white whitespace-pre-line">{children}</div>}
     </div>
   );
 }
@@ -60,27 +60,26 @@ export default function MyLogStarPage() {
   };
 
   return (
-    /* เพิ่ม bg-sky-50 และ min-h-screen เพื่อให้พื้นหลังเป็นสีฟ้าอ่อนทั้งหน้า */
-    <div className="py-14 sm:py-16 bg-sky-50 min-h-screen">
+    <div className="py-10 sm:py-14 md:py-16 bg-sky-50 min-h-screen">
       <PageTitle title={p.metaTitle} />
       <Container>
         <Reveal>
           <div className="max-w-3xl">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
               {p.heroTitle}
             </h1>
-            <p className="mt-3 text-base leading-7 text-slate-600">
+            <p className="mt-2 sm:mt-3 text-sm sm:text-base leading-6 sm:leading-7 text-slate-600">
               {p.heroDesc}
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mt-6 sm:mt-10 grid gap-5 sm:gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <Reveal>
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {/* ส่วนวิดีโอ */}
-              <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                <div className="overflow-hidden rounded-3xl border border-slate-100 bg-slate-900/5">
+              <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
+                <div className="overflow-hidden rounded-xl sm:rounded-3xl border border-slate-100 bg-slate-900/5">
                   <div className="relative aspect-video w-full bg-black">
                     <iframe
                       className="absolute inset-0 h-full w-full"
@@ -95,8 +94,8 @@ export default function MyLogStarPage() {
                 </div>
               </div>
               {/* รูปภาพประกอบ 1 */}
-              <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-slate-50">
+              <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-3xl border border-slate-100 bg-slate-50">
                   <Image
                     src="/logstar.png"
                     alt="LogStar"
@@ -110,10 +109,10 @@ export default function MyLogStarPage() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {/* รูปภาพประกอบ 2 */}
-              <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-slate-50">
+              <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-3xl border border-slate-100 bg-slate-50">
                   <Image
                     src="/mylogstar.png"
                     alt="MylogStar"
@@ -125,16 +124,16 @@ export default function MyLogStarPage() {
               </div>
               {/* การ์ดฟีเจอร์ */}
               <FeatureCard title={p.featureTitle}>
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   <div>
                     <div className="font-semibold text-slate-900">{p.featureLogCollectionTitle}</div>
-                    <div className="mt-2 text-sm leading-7 text-slate-600">
+                    <div className="mt-1.5 sm:mt-2 text-sm leading-6 sm:leading-7 text-slate-600">
                       {p.featureLogCollectionDesc}
                     </div>
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900">{p.featureLogAvailabilityTitle}</div>
-                    <div className="mt-2 text-sm leading-7 text-slate-600">
+                    <div className="mt-1.5 sm:mt-2 text-sm leading-6 sm:leading-7 text-slate-600">
                       {p.featureLogAvailabilityDesc}
                     </div>
                   </div>
@@ -145,7 +144,7 @@ export default function MyLogStarPage() {
         </div>
 
         {/* Accordion ส่วนรายละเอียดเพิ่มเติม */}
-        <div className="mt-12 space-y-4">
+        <div className="mt-8 sm:mt-12 space-y-3 sm:space-y-4">
           {p.accordion.map((section) => (
             <AccordionItem
               key={section.id}

@@ -21,10 +21,14 @@ export default function Home() {
         <div className="relative overflow-hidden">
           {/* Responsive aspect ratio: taller on mobile, wider on desktop */}
           <div className="aspect-[9/14] w-full sm:aspect-[16/10] lg:aspect-[21/9]">
-            <img
+            <Image
               src="/homebg.jpg"
               alt="Home background"
-              className="h-full w-full object-cover"
+              fill
+              priority
+              sizes="100vw"
+              quality={75}
+              className="object-cover"
             />
           </div>
           {/* Multi-layer overlay for depth */}
@@ -156,6 +160,7 @@ export default function Home() {
                           alt="Service icon"
                           width={24}
                           height={24}
+                          loading="lazy"
                           className="h-6 w-6 object-contain"
                         />
                       }
@@ -180,6 +185,7 @@ export default function Home() {
                           alt="Service icon"
                           width={24}
                           height={24}
+                          loading="lazy"
                           className="h-6 w-6 object-contain"
                         />
                       }

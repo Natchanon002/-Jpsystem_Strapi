@@ -35,6 +35,8 @@ export default function ITSystemPage() {
             src="/topbg_system.jpg"
             alt="IT System Background"
             fill
+            sizes="100vw"
+            quality={65}
             className="object-cover"
             priority
           />
@@ -118,6 +120,8 @@ export default function ITSystemPage() {
                             src={serviceImages[idx]}
                             alt={item.title}
                             fill
+                            sizes="(max-width: 640px) 100vw, 96px"
+                            loading="lazy"
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                         </div>

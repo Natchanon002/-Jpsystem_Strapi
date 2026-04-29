@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { LazyYouTube } from "@/components/LazyYouTube";
 
 function Chip({ children }: { children: string }) {
   return (
@@ -79,19 +80,7 @@ export default function MyLogStarPage() {
             <div className="space-y-5 sm:space-y-6">
               {/* ส่วนวิดีโอ */}
               <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
-                <div className="overflow-hidden rounded-xl sm:rounded-3xl border border-slate-100 bg-slate-900/5">
-                  <div className="relative aspect-video w-full bg-black">
-                    <iframe
-                      className="absolute inset-0 h-full w-full"
-                      src="https://www.youtube.com/embed/R8GhVnNnbV8?si=-sLcHVTQTR_vjEMm"
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    />
-                  </div>
-                </div>
+                <LazyYouTube videoId="R8GhVnNnbV8" title="My Log Star Overview" />
               </div>
               {/* รูปภาพประกอบ 1 */}
               <div className="rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.06)]">
@@ -101,6 +90,8 @@ export default function MyLogStarPage() {
                     alt="LogStar"
                     width={1200}
                     height={720}
+                    sizes="(max-width: 1024px) 90vw, 55vw"
+                    loading="lazy"
                     className="h-auto w-full object-cover"
                   />
                 </div>
@@ -118,6 +109,8 @@ export default function MyLogStarPage() {
                     alt="MylogStar"
                     width={1200}
                     height={720}
+                    sizes="(max-width: 1024px) 90vw, 35vw"
+                    loading="lazy"
                     className="h-auto w-full object-cover"
                   />
                 </div>

@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { LazyYouTube } from "@/components/LazyYouTube";
 
 export default function NewReleasePage() {
   const { t } = useLanguage();
@@ -24,6 +25,8 @@ export default function NewReleasePage() {
                 src="/topBG-new-releasesss.jpg"
                 alt="Background visual"
                 fill
+                sizes="(max-width: 768px) 95vw, 90vw"
+                quality={60}
                 className="object-cover"
                 priority
               />
@@ -61,6 +64,9 @@ export default function NewReleasePage() {
                       alt="New release top visual"
                       width={560}
                       height={336}
+                      sizes="(max-width: 1024px) 90vw, 224px"
+                      quality={65}
+                      loading="lazy"
                       className="h-full w-full object-cover"
                     />
                   </div>
@@ -133,17 +139,7 @@ export default function NewReleasePage() {
         <div className="mt-6 sm:mt-10 grid gap-5 sm:gap-6 lg:grid-cols-[1.3fr_0.9fr]">
           <Reveal delay={0.08}>
             <div className="rounded-2xl sm:rounded-[1.75rem] border border-slate-200 bg-white p-4 sm:p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
-              <div className="relative overflow-hidden rounded-xl sm:rounded-3xl border border-slate-200 bg-slate-50 pb-[56.25%]">
-                <iframe
-                  className="absolute inset-0 h-full w-full"
-                  src="https://www.youtube.com/embed/R8GhVnNnbV8?si=-sLcHVTQTR_vjEMm"
-                  title="My Log Star video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
+              <LazyYouTube videoId="R8GhVnNnbV8" title="My Log Star video" />
             </div>
           </Reveal>
 
@@ -155,6 +151,8 @@ export default function NewReleasePage() {
                   alt="Bottom new release visual"
                   width={1200}
                   height={720}
+                  sizes="(max-width: 1024px) 90vw, 40vw"
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -22,6 +22,8 @@ export default function CompanyProfilePage() {
             src="/topB_company_profile.jpg"
             alt="Company background"
             fill
+            sizes="100vw"
+            quality={50}
             className="object-cover"
             priority
           />

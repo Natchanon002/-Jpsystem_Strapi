@@ -30,6 +30,8 @@ export default function ETaxPage() {
             src="/bg_etax_hero.jpg"
             alt="E-Tax Invoice & E-Receipt Background"
             fill
+            sizes="100vw"
+            quality={65}
             className="object-cover"
             priority
           />
@@ -73,6 +75,9 @@ export default function ETaxPage() {
                     src="/bg_painpoints.jpg"
                     alt="Background paperwork"
                     fill
+                    sizes="(max-width: 768px) 100vw, 80vw"
+                    quality={60}
+                    loading="lazy"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/80 to-slate-900/50 sm:to-transparent" />
@@ -124,7 +129,7 @@ export default function ETaxPage() {
                 <div className="flex items-start justify-between mb-4 sm:mb-6">
                   <h3 className="text-lg sm:text-xl font-bold text-slate-800 pr-3">{p.definitionEtaxTitle}</h3>
                   <div className="bg-rose-100 p-1.5 sm:p-2 rounded-lg shrink-0">
-                    <Image src="/icon_etax.png" width={28} height={28} alt="e-Tax Icon" />
+                    <Image src="/icon_etax.png" width={28} height={28} alt="e-Tax Icon" loading="lazy" />
                   </div>
                 </div>
                 <div className="h-px w-full bg-slate-300 mb-4 sm:mb-6" />
@@ -139,7 +144,7 @@ export default function ETaxPage() {
                 <div className="flex items-start justify-between mb-4 sm:mb-6">
                   <h3 className="text-lg sm:text-xl font-bold text-slate-800 pr-3">{p.definitionSigTitle}</h3>
                   <div className="bg-amber-100 p-1.5 sm:p-2 rounded-lg shrink-0">
-                    <Image src="/icon_signature.png" width={28} height={28} alt="Signature Icon" />
+                    <Image src="/icon_signature.png" width={28} height={28} alt="Signature Icon" loading="lazy" />
                   </div>
                 </div>
                 <div className="h-px w-full bg-slate-300 mb-4 sm:mb-6" />
@@ -172,7 +177,7 @@ export default function ETaxPage() {
                   <div className="bg-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-6 shadow-md h-full flex flex-col border border-slate-100">
                     <div className="flex justify-between items-center mb-3 sm:mb-4">
                       <span className="text-slate-300 font-bold text-lg">{idx + 1}</span>
-                      <Image src={`/benefit_${idx + 1}.png`} width={28} height={28} alt="icon" className="object-contain" />
+                      <Image src={`/benefit_${idx + 1}.png`} width={28} height={28} alt="icon" loading="lazy" className="object-contain" />
                     </div>
                     <div className="h-px w-full bg-slate-100 mb-3 sm:mb-4" />
                     <p className="text-[12px] sm:text-[13px] leading-relaxed text-slate-500 font-medium">
@@ -202,6 +207,8 @@ export default function ETaxPage() {
                 alt="Mechanism Diagram"
                 width={1200}
                 height={800}
+                sizes="(max-width: 768px) 100vw, 80vw"
+                loading="lazy"
                 className="inline-block object-contain w-full h-auto"
               />
             </div>
@@ -216,7 +223,7 @@ export default function ETaxPage() {
             <Reveal>
               <div className="relative overflow-hidden rounded-2xl sm:rounded-[3rem] border border-slate-200 p-1 shadow-xl sm:shadow-2xl">
                 <div className="absolute inset-0 z-0 opacity-10">
-                  <Image src="/bg_etax_hero.jpg" alt="background" fill className="object-cover" />
+                  <Image src="/bg_etax_hero.jpg" alt="background" fill sizes="80vw" quality={30} loading="lazy" className="object-cover" />
                 </div>
                 <div className="relative z-10 px-5 py-10 sm:px-12 sm:py-14 md:px-16 text-center bg-white/95 rounded-2xl sm:rounded-[2.9rem]">
                   <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 tracking-tight">

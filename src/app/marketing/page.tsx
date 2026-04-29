@@ -34,6 +34,8 @@ export default function MarketingPage() {
             src="/bg_mmk.jpg"
             alt="Marketing background"
             fill
+            sizes="100vw"
+            quality={65}
             className="object-cover"
             priority
           />
@@ -83,13 +85,13 @@ export default function MarketingPage() {
                   </span>
                 </h3>
                 <div className="relative w-full aspect-[4/3] sm:aspect-square max-w-[450px] rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-xl sm:shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-[0_40px_100px_rgba(14,165,233,0.15)] gradient-border">
-                  <Image src="/commk.jpg" alt="Website background" fill className="object-cover blur-[2px] transition-transform duration-700 group-hover:scale-105" />
+                  <Image src="/commk.jpg" alt="Website background" fill sizes="(max-width: 768px) 90vw, 450px" quality={60} loading="lazy" className="object-cover blur-[2px] transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-slate-200/20" />
 
                   <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
                     <div className="w-full max-w-[280px] sm:max-w-[300px] aspect-[4/3] rounded-2xl sm:rounded-3xl bg-white/60 backdrop-blur-xl border border-white/50 shadow-2xl flex flex-col items-center justify-center p-4 sm:p-6 transition-transform duration-500 group-hover:-translate-y-2">
                       <div className="relative h-14 w-14 sm:h-20 sm:w-20 mb-3 sm:mb-4">
-                        <Image src="/website-icon.png" alt="Website" fill className="object-contain" />
+                        <Image src="/website-icon.png" alt="Website" fill sizes="80px" loading="lazy" className="object-contain" />
                       </div>
                       <span className="text-base sm:text-lg font-bold text-slate-700 tracking-widest uppercase">Website</span>
                     </div>
@@ -108,7 +110,7 @@ export default function MarketingPage() {
                   </span>
                 </h3>
                 <div className="relative w-full aspect-[4/3] sm:aspect-square max-w-[450px] rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-xl sm:shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-[0_40px_100px_rgba(99,102,241,0.12)] gradient-border">
-                  <Image src="/bg_mmk.jpg" alt="Marketing background" fill className="object-cover blur-[2px] transition-transform duration-700 group-hover:scale-105" />
+                  <Image src="/bg_mmk.jpg" alt="Marketing background" fill sizes="(max-width: 768px) 90vw, 450px" quality={60} loading="lazy" className="object-cover blur-[2px] transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-slate-200/20" />
 
                   <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
@@ -117,7 +119,7 @@ export default function MarketingPage() {
                         {socialIcons.map((icon) => (
                           <div key={icon.alt} className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                             <div className="relative h-8 w-8 sm:h-10 sm:w-10 mb-1.5 sm:mb-2">
-                              <Image src={icon.src} alt={icon.alt} fill className="object-contain" />
+                              <Image src={icon.src} alt={icon.alt} fill sizes="40px" loading="lazy" className="object-contain" />
                             </div>
                             <span className="text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase tracking-tighter">{icon.label}</span>
                           </div>

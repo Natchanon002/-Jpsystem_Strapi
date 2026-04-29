@@ -293,7 +293,7 @@ export const translations = {
         ],
         servicesTitle: "Our Service List",
         services: [
-          "Planning, design, and construction of in-house networks.",
+          "IT Planning, design, and construction of in-house networks.",
           "System development/customization.",
           "ERP system planning.",
           "Sales of communication equipment (Servers, PCs).",
@@ -660,7 +660,7 @@ export const translations = {
         ],
         servicesTitle: "รายการบริการ",
         services: [
-          "วางแผน ออกแบบ และติดตั้งเครือข่ายภายในองค์กร",
+          "การวางแผน ออกแบบด้านไอที และติดตั้งเครือข่ายภายในองค์กร",
           "พัฒนาระบบ/ปรับแต่งระบบตามความต้องการ",
           "วางแผนระบบ ERP",
           "จำหน่ายอุปกรณ์สื่อสาร (Server, PC)",
@@ -1027,7 +1027,7 @@ export const translations = {
         ],
         servicesTitle: "サービス",
         services: [
-          "社内ネットワークの企画・設計・構築",
+          "会社のIT企画、設計、ネットワーク構築。",
           "システム開発／カスタマイズ",
           "ERPシステムの企画",
           "通信機器販売（サーバー、PC）",

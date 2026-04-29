@@ -39,6 +39,8 @@ export default function ContactPage() {
             src="/imcontact.jpg"
             alt="Contact Us Background"
             fill
+            sizes="(max-width: 768px) 95vw, 90vw"
+            quality={60}
             className="object-cover object-[85%_center]"
             priority
           />

@@ -62,7 +62,7 @@ function AccordionItem({
                   width={1200}
                   height={720}
                   sizes="(max-width: 1024px) 90vw, 70vw"
-                  loading="lazy"
+                  priority
                   className="h-auto w-full object-cover"
                 />
               </div>

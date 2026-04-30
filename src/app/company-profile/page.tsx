@@ -105,7 +105,8 @@ export default function CompanyProfilePage() {
               {p.info.map((r, idx) => (
                 <Reveal key={r.k} delay={0.04 * idx}>
                   <div className="grid grid-cols-1 gap-1 sm:gap-2 p-4 sm:p-6 sm:grid-cols-3 sm:items-center transition-colors duration-300 hover:bg-sky-50/30">
-                    <div className="text-xs font-semibold tracking-wide text-slate-500">
+                    <div className="flex items-center gap-2 text-sm font-bold tracking-wide text-indigo-700">
+                      <span className="inline-block w-1 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-sky-400 shrink-0" />
                       {r.k}
                     </div>
                     <div className="sm:col-span-2 text-sm font-semibold text-slate-900 break-words">

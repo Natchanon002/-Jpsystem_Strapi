@@ -30,11 +30,15 @@ function AccordionItem({
   isOpen,
   onToggle,
   children,
+  imageSrc,
+  imageAlt,
 }: {
   title: string;
   isOpen: boolean;
   onToggle: () => void;
   children: ReactNode;
+  imageSrc?: string;
+  imageAlt?: string;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-100 bg-white shadow-[0_16px_56px_rgba(15,23,42,0.06)]">
@@ -46,7 +50,26 @@ function AccordionItem({
         <span>{title}</span>
         <span className="text-slate-500 shrink-0">{isOpen ? "−" : "+"}</span>
       </button>
-      {isOpen && <div className="border-t border-slate-100 px-4 py-4 sm:px-6 sm:py-5 text-sm leading-6 sm:leading-7 text-slate-600 bg-white whitespace-pre-line">{children}</div>}
+      {isOpen && (
+        <div className="border-t border-slate-100 px-4 py-4 sm:px-6 sm:py-5 bg-white">
+          <div className="text-sm leading-6 sm:leading-7 text-slate-600 whitespace-pre-line">{children}</div>
+          {imageSrc && (
+            <div className="mt-6">
+              <div className="relative overflow-hidden rounded-xl border border-slate-100 bg-slate-50">
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt || title}
+                  width={1200}
+                  height={720}
+                  sizes="(max-width: 1024px) 90vw, 70vw"
+                  loading="lazy"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -144,6 +167,8 @@ export default function MyLogStarPage() {
               title={section.title}
               isOpen={openSection === section.id}
               onToggle={() => toggleSection(section.id)}
+              imageSrc={section.id === "standalone" ? "/fileserver.png" : section.id === "console" ? "/desktop.jpg" : undefined}
+              imageAlt={section.id === "standalone" ? "MylogStar FileServer" : section.id === "console" ? "MylogStar Desktop" : undefined}
             >
               {section.content}
             </AccordionItem>

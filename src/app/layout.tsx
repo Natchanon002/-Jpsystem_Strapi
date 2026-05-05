@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/i18n/LanguageContext";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { PageTransition } from "@/components/PageTransition";
-import { ScrollToTop } from "@/components/ScrollToTop";
+import { ShellWrapper } from "@/components/ShellWrapper";
+import { ImageConfigProvider } from "@/components/ImageConfigProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -49,14 +47,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white text-slate-900 selection:bg-sky-100 selection:text-slate-900">
         <LanguageProvider>
-          <Navbar />
-          <main className="flex-1">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-          <ScrollToTop />
+          <ImageConfigProvider>
+            <ShellWrapper>{children}</ShellWrapper>
+          </ImageConfigProvider>
         </LanguageProvider>
       </body>
     </html>
   );
 }
+

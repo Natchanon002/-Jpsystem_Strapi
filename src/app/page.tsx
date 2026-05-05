@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage as Image } from "@/components/SiteImage";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";

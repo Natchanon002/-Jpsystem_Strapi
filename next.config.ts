@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
 
     // Aggressive quality — visually identical at 75 but much smaller files
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days cache
+
+    // Allow Vercel Blob images
+    remotePatterns: [
+      { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
+      { protocol: "https", hostname: "*.blob.vercel-storage.com" },
+    ],
   },
 
   // Enable gzip/brotli compression headers

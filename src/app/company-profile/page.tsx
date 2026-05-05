@@ -1,13 +1,15 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage as Image } from "@/components/SiteImage";
 import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useImageConfig } from "@/components/ImageConfigProvider";
 
 export default function CompanyProfilePage() {
   const { t } = useLanguage();
+  const { resolve } = useImageConfig();
   const p = t.pages.company;
 
   return (
@@ -71,7 +73,7 @@ export default function CompanyProfilePage() {
                 <div
                   className="aspect-[16/10] w-full transition-transform duration-700 group-hover:scale-[1.03]"
                   style={{
-                    backgroundImage: "url('/office.jpg')",
+                    backgroundImage: `url('${resolve("/office.jpg")}')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}

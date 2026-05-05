@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage as Image } from "@/components/SiteImage";
 import { type ReactNode, useState } from "react";
 import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Check } from "lucide-react";
 import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
 import { Reveal } from "@/components/Reveal";
@@ -116,38 +115,6 @@ export default function CompanyProfilePage() {
                 </Reveal>
               ))}
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Section 4: Services */}
-      <section className="relative py-10 sm:py-14 md:py-16 overflow-hidden">
-        <div className="hidden sm:block absolute -right-20 bottom-10 h-48 w-48 rounded-full bg-sky-100/30 blur-3xl" />
-
-        <Container>
-          <Reveal>
-            <div className="max-w-2xl">
-              <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl md:text-3xl">
-                {p.servicesTitle}
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="mt-6 sm:mt-10 rounded-2xl sm:rounded-3xl border border-slate-100 bg-white p-5 sm:p-8 shadow-[0_28px_90px_rgba(15,23,42,0.06)] gradient-border">
-            <ul className="space-y-3 sm:space-y-5">
-              {p.services.map((s, idx) => (
-                <Reveal key={s} delay={0.04 * idx}>
-                  <li className="group flex items-start gap-3 sm:gap-4 rounded-xl sm:rounded-2xl p-2 sm:p-3 -mx-2 sm:-mx-3 transition-colors duration-300 hover:bg-sky-50/40">
-                    <span className="mt-0.5 grid h-7 w-7 sm:h-8 sm:w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-indigo-500 shadow-md shadow-sky-500/20 transition-transform duration-300 group-hover:scale-110">
-                      <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" strokeWidth={2.5} />
-                    </span>
-                    <span className="text-sm sm:text-base leading-6 sm:leading-7 text-slate-700">
-                      {s}
-                    </span>
-                  </li>
-                </Reveal>
-              ))}
-            </ul>
           </div>
         </Container>
       </section>

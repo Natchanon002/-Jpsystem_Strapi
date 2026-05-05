@@ -113,16 +113,16 @@ export default function ITSystemPage() {
                     {/* Gradient accent on hover */}
                     <div className="pointer-events-none absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-sky-50/0 to-indigo-50/0 transition-all duration-500 group-hover:from-sky-50/50 group-hover:to-indigo-50/30" />
 
-                    <div className="relative flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+                    <div className="relative flex flex-col items-start gap-4 sm:gap-5">
                       <div className="w-full sm:w-auto shrink-0">
-                        <div className="relative h-32 sm:h-24 w-full sm:w-24 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 bg-slate-50">
+                        <div className="relative aspect-[4/3] sm:aspect-square w-full sm:w-28 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-100 bg-slate-50">
                           <Image
                             src={serviceImages[idx]}
                             alt={item.title}
                             fill
-                            sizes="(max-width: 640px) 100vw, 96px"
+                            sizes="(max-width: 640px) 100vw, 112px"
                             loading="lazy"
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="object-contain p-3 sm:p-2 transition-transform duration-500 group-hover:scale-110"
                           />
                         </div>
                       </div>

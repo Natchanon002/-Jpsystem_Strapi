@@ -290,13 +290,6 @@ export const translations = {
           { k: "Email", v: "info@jpsys-th.com" },
           { k: "Phone", v: "02-664-1674" },
         ],
-        servicesTitle: "Our Service List",
-        services: [
-          "IT Planning, design, and construction of in-house networks.",
-          "System development/customization.",
-          "ERP system planning.",
-          "Sales of communication equipment (Servers, PCs).",
-        ],
       },
       contact: {
         metaTitle: "Contact",
@@ -426,12 +419,13 @@ export const translations = {
             },
             {
               title: "การตลาด DX / IT",
-              desc: "ตั้งแต่ข้อมูลจนถึงแคมเปญ—เชื่อมกลยุทธ์กับการลงมือทำด้วยเทคโนโลยี",
+              desc: "ตั้งแต่ข้อมูลจนถึงแคมเปญ | เชื่อมกลยุทธ์กับการลงมือทำด้วยเทคโนโลยี",
             },
             {
               title: "ความปลอดภัย & การบันทึก",
               desc: "รวมบันทึกตรวจสอบและระบบมอนิเตอร์ เพื่อรองรับ Governance และ Incident",
             },
+
             {
               title: "ที่ปรึกษา",
               desc: "Roadmap ที่ชัดเจนสำหรับผู้บริหาร สอดคล้องกับเป้าหมายธุรกิจ",
@@ -655,13 +649,6 @@ export const translations = {
           { k: "ผู้แทน", v: "Tsubasa Hoshino" },
           { k: "อีเมล", v: "info@jpsys-th.com" },
           { k: "โทร", v: "02-664-1674" },
-        ],
-        servicesTitle: "รายการบริการ",
-        services: [
-          "การวางแผน ออกแบบด้านไอที และติดตั้งเครือข่ายภายในองค์กร",
-          "พัฒนาระบบ/ปรับแต่งระบบตามความต้องการ",
-          "วางแผนระบบ ERP",
-          "จำหน่ายอุปกรณ์สื่อสาร (Server, PC)",
         ],
       },
       contact: {
@@ -1021,13 +1008,6 @@ export const translations = {
           { k: "代表者", v: "Tsubasa Hoshino" },
           { k: "Email", v: "info@jpsys-th.com" },
           { k: "電話", v: "02-664-1674" },
-        ],
-        servicesTitle: "サービス",
-        services: [
-          "会社のIT企画、設計、ネットワーク構築。",
-          "システム開発／カスタマイズ",
-          "ERPシステムの企画",
-          "通信機器販売（サーバー、PC）",
         ],
       },
       contact: {

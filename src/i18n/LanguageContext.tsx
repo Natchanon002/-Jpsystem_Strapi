@@ -18,10 +18,19 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Language>("en");
 
   useEffect(() => {
-    const saved = (typeof window !== "undefined"
-      ? (window.localStorage.getItem(STORAGE_KEY) as Language | null)
-      : null) ?? null;
-    if (saved && saved in translations) setLangState(saved);
+    if (typeof window === "undefined") return;
+
+    const saved = window.localStorage.getItem(STORAGE_KEY) as Language | null;
+
+    if (saved && saved in translations) {
+      setLangState(saved);
+      return;
+    }
+
+    // Auto-detect: Japanese browser → "jp", everything else → "en"
+    const browserLang = navigator.language || "";
+    const detected: Language = browserLang.startsWith("ja") ? "jp" : "en";
+    setLangState(detected);
   }, []);
 
   useEffect(() => {

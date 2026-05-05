@@ -1,29 +1,8 @@
 import { NextRequest } from "next/server";
-import { put, list } from "@vercel/blob";
+import { readConfig, writeConfig, uploadFile } from "@/lib/storage";
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "jpsystem2026";
 const CONFIG_KEY = "image-overrides.json";
-
-/** Read the overrides config from Vercel Blob */
-async function readOverrides(): Promise<Record<string, string>> {
-  try {
-    const { blobs } = await list({ prefix: CONFIG_KEY });
-    if (blobs.length === 0) return {};
-    const res = await fetch(blobs[0].url);
-    return await res.json();
-  } catch {
-    return {};
-  }
-}
-
-/** Write the overrides config to Vercel Blob */
-async function writeOverrides(overrides: Record<string, string>) {
-  await put(CONFIG_KEY, JSON.stringify(overrides), {
-    access: "public",
-    addRandomSuffix: false,
-    contentType: "application/json",
-  });
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -41,24 +20,13 @@ export async function POST(request: NextRequest) {
       return Response.json({ error: "Missing file or targetName" }, { status: 400 });
     }
 
-    // Upload to Vercel Blob
-    const blob = await put(`images/${targetName}`, file, {
-      access: "public",
-      addRandomSuffix: false,
-      contentType: file.type,
-    });
+    const url = await uploadFile(`images/${targetName}`, file, file.type);
 
-    // Update overrides config
-    const overrides = await readOverrides();
-    overrides[targetName] = blob.url;
-    await writeOverrides(overrides);
+    const overrides = await readConfig<Record<string, string>>(CONFIG_KEY, {});
+    overrides[targetName] = url;
+    await writeConfig(CONFIG_KEY, overrides);
 
-    return Response.json({
-      success: true,
-      fileName: targetName,
-      url: blob.url,
-      size: file.size,
-    });
+    return Response.json({ success: true, fileName: targetName, url, size: file.size });
   } catch (error) {
     console.error("Upload error:", error);
     return Response.json({ error: "Upload failed" }, { status: 500 });

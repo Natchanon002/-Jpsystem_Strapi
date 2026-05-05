@@ -1,27 +1,8 @@
 import { NextRequest } from "next/server";
-import { put, list } from "@vercel/blob";
+import { readConfig, writeConfig, uploadFile } from "@/lib/storage";
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "jpsystem2026";
 const CONFIG_KEY = "image-overrides.json";
-
-async function readOverrides(): Promise<Record<string, string>> {
-  try {
-    const { blobs } = await list({ prefix: CONFIG_KEY });
-    if (blobs.length === 0) return {};
-    const res = await fetch(blobs[0].url);
-    return await res.json();
-  } catch {
-    return {};
-  }
-}
-
-async function writeOverrides(overrides: Record<string, string>) {
-  await put(CONFIG_KEY, JSON.stringify(overrides), {
-    access: "public",
-    addRandomSuffix: false,
-    contentType: "application/json",
-  });
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -37,7 +18,6 @@ export async function POST(request: NextRequest) {
       return Response.json({ error: "Missing url or targetName" }, { status: 400 });
     }
 
-    // Download image from URL
     const response = await fetch(url, {
       headers: { "User-Agent": "Mozilla/5.0 (Admin Image Downloader)" },
     });
@@ -52,29 +32,17 @@ export async function POST(request: NextRequest) {
     }
 
     const arrayBuffer = await response.arrayBuffer();
-
     if (arrayBuffer.byteLength > 10 * 1024 * 1024) {
       return Response.json({ error: "Image too large (max 10MB)" }, { status: 400 });
     }
 
-    // Upload to Vercel Blob
-    const blob = await put(`images/${targetName}`, arrayBuffer, {
-      access: "public",
-      addRandomSuffix: false,
-      contentType,
-    });
+    const blobUrl = await uploadFile(`images/${targetName}`, arrayBuffer, contentType);
 
-    // Update overrides config
-    const overrides = await readOverrides();
-    overrides[targetName] = blob.url;
-    await writeOverrides(overrides);
+    const overrides = await readConfig<Record<string, string>>(CONFIG_KEY, {});
+    overrides[targetName] = blobUrl;
+    await writeConfig(CONFIG_KEY, overrides);
 
-    return Response.json({
-      success: true,
-      fileName: targetName,
-      url: blob.url,
-      size: arrayBuffer.byteLength,
-    });
+    return Response.json({ success: true, fileName: targetName, url: blobUrl, size: arrayBuffer.byteLength });
   } catch (error) {
     console.error("URL upload error:", error);
     return Response.json({ error: "Failed to download image from URL" }, { status: 500 });

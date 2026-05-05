@@ -2,7 +2,8 @@
 
 import React, { useState, useCallback, useRef } from "react";
 import Image from "next/image";
-import { Lock, Upload, LogOut, Check, X, RefreshCw, Search, Image as ImageIcon, Link2, Trash2 } from "lucide-react";
+import Link from "next/link";
+import { Lock, Upload, LogOut, Check, X, RefreshCw, Search, Image as ImageIcon, Link2, Type } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
 /*  Image registry – ALL known images, grouped by page                */
@@ -219,6 +220,10 @@ export default function AdminPage() {
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
+            <Link href="/admin/text"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-200 bg-white px-3 py-2 text-xs font-medium text-emerald-600 shadow-sm hover:bg-emerald-50">
+              <Type className="h-3.5 w-3.5" />แก้ข้อความ
+            </Link>
             <button onClick={() => loadOverrides()} disabled={loading}
               className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-600 shadow-sm hover:bg-slate-50 disabled:opacity-50">
               <RefreshCw className={`h-3.5 w-3.5 ${loading ? "animate-spin" : ""}`} /><span className="hidden sm:inline">Refresh</span>

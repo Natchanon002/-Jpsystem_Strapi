@@ -1,7 +1,7 @@
 import type { SchemaTypeDefinition } from "sanity";
 import { siteImage } from "./siteImage";
 import { sharedContent, homePage, companyPage, itSystemPage, eTaxPage, marketingPage } from "./pages";
-import { myLogStarPage, invoicePage, newReleasePage, contactPage } from "./pages2";
+import { myLogStarPage, newReleasePage, contactPage } from "./pages2";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -11,7 +11,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     companyPage,
     itSystemPage,
     eTaxPage,
-    invoicePage,
     marketingPage,
     myLogStarPage,
     newReleasePage,

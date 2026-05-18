@@ -17,7 +17,7 @@ export const translations = {
       newRelease: "New Release",
       itSystem: "IT System",
       eTax: "e-Tax Invoice & e-Receipt",
-      invoiceReceipt: "Invoice & e-Receipt",
+
       marketing: "Marketing",
       myLogStar: "My Log Star",
       company: "Company",
@@ -25,7 +25,7 @@ export const translations = {
     },
     common: {
       readMore: "READ MORE",
-      viewDetails: "View details",
+
       learnMore: "Learn more",
       send: "Send message",
       sent: "Sent",
@@ -39,12 +39,12 @@ export const translations = {
       home: {
         metaTitle: "Modern Japanese Zen IT Partner",
         hero: {
-          eyebrow: "Modern Japanese Zen",
+
           title: "We will help your company with DX (Digital Transformation).",
           subtitle:
             "Minimal, precise, and engineered for enterprise—system development, e-Tax solutions, and DX marketing.",
           ctaPrimary: "Explore services",
-          ctaSecondary: "Company profile",
+
         },
         services: {
           title: "Our Service",
@@ -95,18 +95,7 @@ export const translations = {
         monthlyCostLabel: "Monthly cost when the circulation is 1,000 copies / month",
         monthlyCostValue: "39.82 Baht x 1,000 = 39,820 Baht / month",
         monthlyCostReduction: "Monthly 39,820 baht + labor cost reduction!",
-        products: [
-          {
-            name: "e-Tax",
-            desc: "A modern problem-solution workflow for tax digitization and cost reduction.",
-            href: "/e-tax",
-          },
-          {
-            name: "My Log Star",
-            desc: "A secure log management platform—designed for compliance and deep technical visibility.",
-            href: "/my-log-star",
-          },
-        ],
+
       },
       itSystem: {
         metaTitle: "IT System Solutions",
@@ -129,8 +118,7 @@ export const translations = {
       eTax: {
         metaTitle: "e-Tax Invoice & e-Receipt",
         title: "e-Tax Invoice & e-Receipt",
-        heroSubtitle:
-          "Clean professionalism—built for trust, compliance, and operational speed.",
+
         painHeading: "Are you wasting your time on handwritten signatures on various documents?",
         painTitle: "Pain Points",
         painItems: [
@@ -170,73 +158,24 @@ export const translations = {
         costMonthlyValue: "39.82 Baht × 1,000 = 39,820 Baht / month",
         costMonthlyReduction: "Monthly 39,820 baht + labor cost reduction!",
         contactBtn: "Contact",
-        solutionTitle: "Comprehensive e-Tax & Digital Signature Support",
-        solutionDesc:
-          "In Japan System, we support e-Tax Invoice & e-Receipt—one of the nine DX measures promoted by the Thai Revenue Service.",
-        blocks: {
-          eTax: {
-            title: "What is e-Tax Invoice & e-Receipt",
-            desc: "Digitize invoice/receipt issuance, storage, and retrieval to reduce paper, speed up workflows, and improve audit readiness.",
-          },
-          signature: {
-            title: "What is Digital Signature",
-            desc: "A secure signing method that verifies identity and protects integrity—reducing risk while enabling remote approvals.",
-          },
-        },
-        compareTitle: "COST REDUCTION EXAMPLE BY INTRODUCING E-TAX",
-        compareSubtitle: "Current Process vs. With Japan System e‑Tax",
-        metrics: [
-          { k: "Time saved", current: 25, withSystem: 75 },
-          { k: "Paper cost reduction", current: 15, withSystem: 70 },
-          { k: "Security enhancement", current: 35, withSystem: 85 },
-        ],
-        cta: { primary: "Contact us", secondary: "See e‑Tax detail" },
-        detailsTitle: "e-Tax Details",
-        detailsSubtitle: "Deep dive into e-Tax implementation and best practices.",
-        detailsProblemTitle: "Pain Points",
-        detailsProblemItems: [
-          "Manual tax document handling and errors",
-          "Slow approval cycles and fragmented data",
-          "Compliance risk due to inconsistent records",
-        ],
-        detailsSolutionTitle: "Digital Transformation",
-        detailsSolutionItems: [
-          "End-to-end electronic workflows",
-          "Searchable, auditable, centralized records",
-          "Automation that reduces cost and turnaround time",
-        ],
-        detailsImpactTitle: "Cost reduction impact",
-        detailsImpactItems: [
-          { label: "Processing time", value: "-40%" },
-          { label: "Manual errors", value: "-60%" },
-          { label: "Operational cost", value: "-25%" },
-        ],
+
       },
       marketing: {
         metaTitle: "DX & IT Marketing",
         title: "Marketing",
-        subtitle: "Modern DX and IT marketing services—presented as a refined masonry gallery.",
+
         heroTitle: "Website and Online Marketing",
         cardWebsite: "Website",
         cardOnlineMarketing: "Online Marketing",
-        cards: [
-          { title: "DX Strategy", tag: "Consulting" },
-          { title: "MarTech Stack", tag: "Implementation" },
-          { title: "Content Systems", tag: "Automation" },
-          { title: "Performance Ads", tag: "Growth" },
-          { title: "SEO & Technical", tag: "Engineering" },
-          { title: "Analytics & BI", tag: "Insights" },
-          { title: "CRM Journeys", tag: "Lifecycle" },
-          { title: "Brand + Product", tag: "Creative" },
-        ],
+
       },
       myLogStar: {
         metaTitle: "My Log Star Detail",
         title: "My Log Star",
-        subtitle: "Enterprise log management with deep technical clarity.",
+
         heroTitle: "My log star",
         heroDesc: "What is log management? When you use a personal computer, information such as what software you used and which file you opened is recorded on your computer... (logs) contains a great deal of information, and a closer look reveals who, when, and what they were doing on their computer.",
-        videoTitle: "Product Overview (16:9)",
+
         featureTitle: "MylogStar Features",
         featureLogCollectionTitle: "Log collection power",
         featureLogCollectionDesc: "Acquires logs at the kernel level of the OS, grasping operations that cannot be acquired by other log management products.",
@@ -248,21 +187,7 @@ export const translations = {
           { id: "standalone", title: "My log Star FileServer", content: "Pinpoint monitoring of important servers Low price & high functionality! File server access log / audit log management\n\nLog monitoring is indispensable for measures against information leakage. However, for companies that own a huge number of servers or small and medium-sized companies that cannot devote a lot of resources to system management, it will be difficult to implement it on all systems. MylogStar FileServer monitors data input / output and user operations within the file server by narrowing down the monitoring target to the file server where confidential information is stored and installing it directly on the monitored server. It is a file server access log management software that maintains security. MylogStar FileServer also makes it possible to acquire audit logs. Audit logs are a record of operations performed by system administrators and users. The operation contents in the server are recorded as an audit log in chronological order and continuously (when, who, what did). There is no need to prepare a separate management server, and there is no need to install an agent on the PC, so log management is easy and inexpensive.", images: 1 },
           { id: "console", title: "My log star", content: "My log Star Desktop — \"Log management\" & \"device control\" that can be done immediately on a stand-alone PC or a small base\nMylogStar Desktop is log management and device control software that is ideal for environments with a small number of target PCs, such as PCs that cannot connect to the network and small bases. No management server is required, and it can be easily installed by simply installing it on the target PC. With the industry's top class log collection power, operation logs in the target PC can be uprooted and managed as a trail. In addition, the device control function controls the export of confidential data.\n\nLog management\nMylogStar Desktop — With the industry's top class log collection power, you can uproot the operation log in the target PC and keep it as a trail. The most worrisome thing about leaks from standalone PCs and mobile PCs is the removable disk. MylogStar Desktop records all file operations performed on local disks, network drives, etc., including removable disks. In addition, it also has a trace function, so even if a cover-up is performed by unauthorized operation, it can be identified immediately. With the screen snapshot function, you can also capture the screen when a specified event occurs.\n\nMylogStar 4 Standalone Manager\nMylogStar 4 Standalone Manager is MylogStar 4 — Logs of several machines on which Desktop is installed can be centrally collected, managed and viewed. In addition, MylogStar 4 Standalone including alert function and report function. There are also functions and operations that can be enhanced by using Manager.\n\n※ SQL Server is required to use Standalone Manager.\n※ The English version of MylogStar 4 Standalone Manager is a product to be developed, so we will let you know when it will be available.\n\nEasy-to-understand and simple management console\nThe management console of MylogStar Desktop is a simple and easy-to-understand management console so that even personnel who are not familiar with IT can easily check the logs.\n\nDevice control\nMylogStar Desktop's Access Control Option not only prohibits the use of USB devices uniformly, but also allows you to set detailed security policies such as allow, prohibit, and read-only when using USB storage. In addition, by using the \"USB whitelist\" function, it is possible to give permission to use only a specific USB storage based on the vendor ID, product ID, and serial number given to the USB storage. As a result, it is possible to enhance security by taking advantage of the convenience of USB storage without impairing business efficiency.", images: 1 },
         ],
-        chips: ["SIEM-ready", "Audit trails", "Retention policies", "Role-based access"],
-        details: [
-          {
-            title: "Architecture",
-            desc: "Designed for predictable ingestion pipelines and structured indexing with secure access boundaries.",
-          },
-          {
-            title: "Compliance",
-            desc: "Retention, immutability options, and exportability—built for real-world audit requirements.",
-          },
-          {
-            title: "Performance",
-            desc: "Optimized querying patterns and dashboards for fast incident triage and reporting.",
-          },
-        ],
+
       },
       company: {
         metaTitle: "Company Profile",
@@ -306,62 +231,11 @@ export const translations = {
         },
         office: {
           title: "Office",
-          lines: ["Asoke, Bangkok", "Mon–Fri, 09:00–18:00"],
           email: "info@jpsys-th.com",
           phone: "02-664-1674",
-          map: "Map placeholder",
         },
       },
-      invoiceReceipt: {
-        metaTitle: "Invoice & e-Receipt",
-        title: "Invoice & e-Receipt",
-        heroSubtitle:
-          "Digital invoicing and receipts—streamlined for compliance, speed, and trust.",
-        painTitle: "Pain Points",
-        painItems: [
-          "Too many documents to sign",
-          "Sometimes I have to go to the office just for one document",
-          "The time to sign has become a burden on my work",
-          "Get tired when signing",
-          "Very troublesome because it is a sign of many",
-        ],
-        solutionTitle: "Comprehensive Invoice & e-Receipt Support",
-        solutionDesc:
-          "Japan System supports Invoice & e-Receipt—one of the nine DX measures promoted by the Thai Revenue Service.",
-        blocks: {
-          eTax: {
-            title: "What is e-Tax Invoice & e-Receipt",
-            desc: "Digitize invoice/receipt issuance, storage, and retrieval to reduce paper, speed up workflows, and improve audit readiness.",
-          },
-          signature: {
-            title: "What is Digital Signature",
-            desc: "A secure signing method that verifies identity and protects integrity—reducing risk while enabling remote approvals.",
-          },
-        },
-        compareTitle: "COST REDUCTION EXAMPLE BY INTRODUCING E-TAX",
-        compareSubtitle: "Current Process vs. With Japan System e‑Tax",
-        metrics: [
-          { k: "Time saved", current: 25, withSystem: 75 },
-          { k: "Paper cost reduction", current: 15, withSystem: 70 },
-          { k: "Security enhancement", current: 35, withSystem: 85 },
-        ],
-        cta: { primary: "Contact us", secondary: "See e‑Tax detail" },
-        heroChip: "Clean Professionalism",
-        painItemSub: "Reduce friction with digital workflow + secure signing.",
-        currentProcess: "Current Process",
-        withJapanSystem: "With Japan System e‑Tax",
-        currentLabel: "Current",
-        withSystemLabel: "With Japan System",
-        solutionChipA: "Paperless workflow",
-        solutionChipB: "Audit-ready storage",
-        sigChipA: "Remote approval",
-        sigChipB: "Tamper resistance",
-        trustTitle: "Trust by design",
-        trustDesc: "Thin separators, clear information architecture, and enterprise-grade posture—designed to feel calm, premium, and reliable.",
-        ctaTitle: "Ready to modernize approvals?",
-        ctaDesc: "Start with a clean pilot—then scale with confidence.",
-        solutionIllustration: "SOLUTION ILLUSTRATION",
-      },
+
 
     },
     footer: {
@@ -377,7 +251,7 @@ export const translations = {
       newRelease: "ข่าวสาร/ผลิตภัณฑ์ใหม่",
       itSystem: "ระบบ IT",
       eTax: "e-Tax Invoice & e-Receipt",
-      invoiceReceipt: "Invoice & e-Receipt",
+
       marketing: "การตลาด",
       myLogStar: "My Log Star",
       company: "ข้อมูลบริษัท",
@@ -385,7 +259,7 @@ export const translations = {
     },
     common: {
       readMore: "อ่านเพิ่มเติม",
-      viewDetails: "ดูรายละเอียด",
+
       learnMore: "ดูเพิ่มเติม",
       send: "ส่งข้อความ",
       sent: "ส่งแล้ว",
@@ -399,12 +273,12 @@ export const translations = {
       home: {
         metaTitle: "พาร์ตเนอร์ IT สไตล์ Zen ญี่ปุ่น",
         hero: {
-          eyebrow: "Modern Japanese Zen",
+
           title: "Japan System พร้อมช่วยเหลือบริษัทของคุณด้าน DX (Digital Transformation)",
           subtitle:
             "เรียบหรู แม่นยำ และออกแบบเพื่อองค์กร—พัฒนาระบบ, e-Tax และ DX/IT Marketing",
           ctaPrimary: "ดูบริการ",
-          ctaSecondary: "ข้อมูลบริษัท",
+
         },
         services: {
           title: "บริการของเรา",
@@ -456,18 +330,7 @@ export const translations = {
         monthlyCostLabel: "ต้นทุนรายเดือนเมื่อจำนวนหมุนเวียน 1,000 ชุด / เดือน",
         monthlyCostValue: "39.82 Baht x 1,000 = 39,820 Baht / เดือน",
         monthlyCostReduction: "ประหยัดได้ 39,820 Baht/เดือน + ลดต้นทุนแรงงาน!",
-        products: [
-          {
-            name: "e-Tax",
-            desc: "แปลงปัญหาเป็นโซลูชัน—ดิจิทัลไทซ์งานภาษี ลดต้นทุน และเพิ่มความเร็ว",
-            href: "/e-tax",
-          },
-          {
-            name: "My Log Star",
-            desc: "แพลตฟอร์มจัดการ Log ที่ปลอดภัย รองรับ Compliance และรายละเอียดเชิงเทคนิค",
-            href: "/my-log-star",
-          },
-        ],
+
       },
       itSystem: {
         metaTitle: "โซลูชันระบบ IT",
@@ -490,7 +353,7 @@ export const translations = {
       eTax: {
         metaTitle: "e-Tax Invoice & e-Receipt",
         title: "e-Tax Invoice & e-Receipt",
-        heroSubtitle: "โทนมืออาชีพ เน้นความน่าเชื่อถือ ความเร็ว และความสอดคล้องตามข้อกำหนด",
+
         painHeading: "คุณกำลังเสียเวลาไปกับการเซ็นชื่อด้วยลายมือบนเอกสารต่าง ๆ อยู่หรือไม่?",
         painTitle: "ปัญหาที่พบบ่อย",
         painItems: [
@@ -530,73 +393,24 @@ export const translations = {
         costMonthlyValue: "39.82 Baht × 1,000 = 39,820 Baht / เดือน",
         costMonthlyReduction: "ประหยัดได้ 39,820 Baht/เดือน + ลดต้นทุนแรงงาน!",
         contactBtn: "ติดต่อเรา",
-        solutionTitle: "บริการสนับสนุน e‑Tax และลายเซ็นดิจิทัลแบบครบวงจร",
-        solutionDesc:
-          "Japan System สนับสนุน e‑Tax Invoice & e‑Receipt ซึ่งเป็นหนึ่งใน 9 มาตรการ DX ที่กรมสรรพากรไทยผลักดัน",
-        blocks: {
-          eTax: {
-            title: "e‑Tax Invoice & e‑Receipt คืออะไร",
-            desc: "ออกเอกสาร/จัดเก็บ/ค้นหาใบกำกับและใบเสร็จแบบดิจิทัล ลดกระดาษ เพิ่มความเร็ว และพร้อมตรวจสอบย้อนหลัง",
-          },
-          signature: {
-            title: "Digital Signature คืออะไร",
-            desc: "การลงนามที่ปลอดภัย ตรวจสอบตัวตนและความถูกต้องของเอกสาร ช่วยอนุมัติจากระยะไกลและลดความเสี่ยง",
-          },
-        },
-        compareTitle: "ตัวอย่างการลดต้นทุนเมื่อใช้ E‑TAX",
-        compareSubtitle: "กระบวนการเดิม เทียบกับ เมื่อใช้ Japan System e‑Tax",
-        metrics: [
-          { k: "ประหยัดเวลา", current: 25, withSystem: 75 },
-          { k: "ลดต้นทุนกระดาษ", current: 15, withSystem: 70 },
-          { k: "เพิ่มความปลอดภัย", current: 35, withSystem: 85 },
-        ],
-        cta: { primary: "ติดต่อเรา", secondary: "ดูรายละเอียด e‑Tax" },
-        detailsTitle: "รายละเอียด e-Tax",
-        detailsSubtitle: "จาก Pain Points สู่ Digital Transformation ที่ชัดเจน",
-        detailsProblemTitle: "ปัญหาที่พบบ่อย",
-        detailsProblemItems: [
-          "จัดการเอกสารด้วยมือ เสี่ยงผิดพลาด",
-          "อนุมัติช้า ข้อมูลกระจัดกระจาย",
-          "ความเสี่ยงด้าน Compliance จากบันทึกไม่สม่ำเสมอ",
-        ],
-        detailsSolutionTitle: "Digital Transformation",
-        detailsSolutionItems: [
-          "Workflow อิเล็กทรอนิกส์ตั้งแต่ต้นจนจบ",
-          "ค้นหาได้ ตรวจสอบได้ จัดเก็บรวมศูนย์",
-          "ออโตเมชันช่วยลดต้นทุนและเวลาทำงาน",
-        ],
-        detailsImpactTitle: "ผลลัพธ์ด้านการลดต้นทุน",
-        detailsImpactItems: [
-          { label: "เวลาประมวลผล", value: "-40%" },
-          { label: "ความผิดพลาด", value: "-60%" },
-          { label: "ต้นทุนดำเนินงาน", value: "-25%" },
-        ],
+
       },
       marketing: {
         metaTitle: "การตลาด",
         title: "การตลาด",
-        subtitle: "บริการ DX และ IT การตลาด แบบโมเดิร์น ในเลย์เอาต์ Masonry",
+
         heroTitle: "เว็บไซต์และการตลาดออนไลน์",
         cardWebsite: "เว็บไซต์",
         cardOnlineMarketing: "การตลาดออนไลน์",
-        cards: [
-          { title: "DX Strategy", tag: "Consulting" },
-          { title: "MarTech Stack", tag: "Implementation" },
-          { title: "Content Systems", tag: "Automation" },
-          { title: "Performance Ads", tag: "Growth" },
-          { title: "SEO & Technical", tag: "Engineering" },
-          { title: "Analytics & BI", tag: "Insights" },
-          { title: "CRM Journeys", tag: "Lifecycle" },
-          { title: "Brand + Product", tag: "Creative" },
-        ],
+
       },
       myLogStar: {
         metaTitle: "รายละเอียด My Log Star",
         title: "My Log Star",
-        subtitle: "ระบบจัดการ Log สำหรับองค์กร พร้อมรายละเอียดเชิงเทคนิค",
+
         heroTitle: "My log star",
         heroDesc: "การจัดการ Log คืออะไร? เมื่อคุณใช้คอมพิวเตอร์ส่วนบุคคล ข้อมูลต่าง ๆ เช่น ซอฟต์แวร์ที่ใช้งานและไฟล์ที่เปิด จะถูกบันทึกไว้ในคอมพิวเตอร์ของคุณ... (Log) มีข้อมูลมากมาย และเมื่อตรวจสอบอย่างละเอียดจะทราบว่าใคร เมื่อไหร่ ทำอะไรบนคอมพิวเตอร์",
-        videoTitle: "วิดีโอแนะนำ (16:9)",
+
         featureTitle: "คุณสมบัติของ MylogStar",
         featureLogCollectionTitle: "พลังในการเก็บ Log",
         featureLogCollectionDesc: "เก็บ Log ในระดับ Kernel ของ OS จับการทำงานที่ผลิตภัณฑ์จัดการ Log อื่น ๆ ไม่สามารถทำได้",
@@ -608,21 +422,7 @@ export const translations = {
           { id: "standalone", title: "My log Star FileServer", content: "การตรวจสอบเซิร์ฟเวอร์สำคัญแบบเจาะจุด ราคาประหยัดและมีฟังก์ชันสูง! การจัดการ Access Log / Audit Log ของ File Server\n\nการตรวจสอบ Log เป็นสิ่งจำเป็นสำหรับมาตรการป้องกันข้อมูลรั่วไหล อย่างไรก็ตาม สำหรับบริษัทที่มีเซิร์ฟเวอร์จำนวนมากหรือบริษัทขนาดเล็กถึงกลางที่ไม่สามารถทุ่มทรัพยากรจำนวนมากให้กับการจัดการระบบ การนำมาใช้กับทุกระบบจะเป็นเรื่องยาก MylogStar FileServer ตรวจสอบการนำเข้า/ส่งออกข้อมูลและการทำงานของผู้ใช้ภายใน File Server โดยจำกัดเป้าหมายการตรวจสอบไปที่ File Server ที่จัดเก็บข้อมูลลับและติดตั้งโดยตรงบนเซิร์ฟเวอร์ที่ถูกตรวจสอบ เป็นซอฟต์แวร์จัดการ Access Log ของ File Server ที่รักษาความปลอดภัย MylogStar FileServer ยังสามารถเก็บ Audit Log ได้ Audit Log เป็นบันทึกการทำงานที่ดำเนินการโดยผู้ดูแลระบบและผู้ใช้ เนื้อหาการทำงานในเซิร์ฟเวอร์จะถูกบันทึกเป็น Audit Log ตามลำดับเวลาอย่างต่อเนื่อง (เมื่อไหร่ ใคร ทำอะไร) ไม่จำเป็นต้องเตรียมเซิร์ฟเวอร์จัดการแยกต่างหาก และไม่จำเป็นต้องติดตั้ง Agent บน PC ดังนั้นการจัดการ Log จึงง่ายและประหยัด", images: 1 },
           { id: "console", title: "My log star", content: "My log Star Desktop — \"การจัดการ Log\" และ \"การควบคุมอุปกรณ์\" ที่ทำได้ทันทีบน PC แบบ Stand-alone หรือฐานขนาดเล็ก\nMylogStar Desktop เป็นซอฟต์แวร์จัดการ Log และควบคุมอุปกรณ์ที่เหมาะสำหรับสภาพแวดล้อมที่มี PC เป้าหมายจำนวนน้อย เช่น PC ที่ไม่สามารถเชื่อมต่อเครือข่ายและฐานขนาดเล็ก ไม่จำเป็นต้องมีเซิร์ฟเวอร์จัดการ และสามารถติดตั้งได้ง่ายเพียงแค่ติดตั้งบน PC เป้าหมาย ด้วยพลังการเก็บ Log ระดับสูงสุดในอุตสาหกรรม สามารถเก็บ Log การทำงานใน PC เป้าหมายได้อย่างครบถ้วนและจัดการเป็นร่องรอย นอกจากนี้ ฟังก์ชันควบคุมอุปกรณ์ยังควบคุมการส่งออกข้อมูลลับ\n\nการจัดการ Log\nMylogStar Desktop — ด้วยพลังการเก็บ Log ระดับสูงสุดในอุตสาหกรรม คุณสามารถเก็บ Log การทำงานใน PC เป้าหมายและเก็บไว้เป็นร่องรอย สิ่งที่น่าเป็นห่วงที่สุดเกี่ยวกับการรั่วไหลจาก PC แบบ Stand-alone และ PC เคลื่อนที่คือดิสก์แบบถอดได้ MylogStar Desktop บันทึกการทำงานไฟล์ทั้งหมดที่ดำเนินการบนดิสก์ในเครื่อง ไดรฟ์เครือข่าย ฯลฯ รวมถึงดิสก์แบบถอดได้ นอกจากนี้ยังมีฟังก์ชันติดตาม ดังนั้นแม้จะมีการปกปิดโดยการทำงานที่ไม่ได้รับอนุญาต ก็สามารถระบุได้ทันที ด้วยฟังก์ชัน Screen Snapshot คุณยังสามารถจับภาพหน้าจอเมื่อเกิดเหตุการณ์ที่กำหนด\n\nMylogStar 4 Standalone Manager\nMylogStar 4 Standalone Manager คือ MylogStar 4 — สามารถรวบรวม จัดการ และดู Log จากเครื่องหลายเครื่องที่ติดตั้ง Desktop ได้จากศูนย์กลาง นอกจากนี้ MylogStar 4 Standalone รวมถึงฟังก์ชันแจ้งเตือนและฟังก์ชันรายงาน ยังมีฟังก์ชันและการทำงานที่สามารถเพิ่มประสิทธิภาพได้โดยใช้ Manager\n\n※ จำเป็นต้องมี SQL Server เพื่อใช้งาน Standalone Manager\n※ เวอร์ชันภาษาอังกฤษของ MylogStar 4 Standalone Manager เป็นผลิตภัณฑ์ที่อยู่ระหว่างการพัฒนา เราจะแจ้งให้ทราบเมื่อพร้อมใช้งาน\n\nคอนโซลจัดการที่เข้าใจง่ายและเรียบง่าย\nคอนโซลจัดการของ MylogStar Desktop เป็นคอนโซลจัดการที่เรียบง่ายและเข้าใจง่าย เพื่อให้แม้แต่บุคลากรที่ไม่คุ้นเคยกับ IT ก็สามารถตรวจสอบ Log ได้อย่างง่ายดาย\n\nการควบคุมอุปกรณ์\nตัวเลือก Access Control ของ MylogStar Desktop ไม่เพียงแค่ห้ามใช้อุปกรณ์ USB อย่างเหมารวม แต่ยังช่วยให้คุณสามารถกำหนดนโยบายความปลอดภัยอย่างละเอียด เช่น อนุญาต ห้าม และอ่านอย่างเดียว เมื่อใช้ USB Storage นอกจากนี้ โดยใช้ฟังก์ชัน \"USB whitelist\" สามารถให้สิทธิ์ใช้งานเฉพาะ USB Storage ที่ระบุตาม Vendor ID, Product ID และ Serial Number ที่กำหนดให้กับ USB Storage ส่งผลให้สามารถเพิ่มความปลอดภัยโดยใช้ประโยชน์จากความสะดวกของ USB Storage โดยไม่กระทบประสิทธิภาพทางธุรกิจ", images: 1 },
         ],
-        chips: ["พร้อมต่อ SIEM", "ตรวจสอบย้อนหลัง", "นโยบายการเก็บรักษา", "กำหนดสิทธิ์ผู้ใช้"],
-        details: [
-          {
-            title: "สถาปัตยกรรม",
-            desc: "ออกแบบเพื่อ ingestion ที่คาดเดาได้ พร้อม indexing แบบมีโครงสร้าง และขอบเขตการเข้าถึงที่ปลอดภัย",
-          },
-          {
-            title: "การปฏิบัติตามกฎระเบียบ",
-            desc: "กำหนด retention และตัวเลือกด้าน immutability พร้อม export รองรับงานตรวจสอบจริง",
-          },
-          {
-            title: "ประสิทธิภาพ",
-            desc: "Query และ dashboard เร็ว ช่วย triage incident และทำรายงานได้คล่องตัว",
-          },
-        ],
+
       },
       company: {
         metaTitle: "ข้อมูลบริษัท",
@@ -666,62 +466,11 @@ export const translations = {
         },
         office: {
           title: "สำนักงาน",
-          lines: ["อโศก กรุงเทพฯ", "จันทร์–ศุกร์ 09:00–18:00"],
           email: "info@jpsys-th.com",
           phone: "02-664-1674",
-          map: "ตัวอย่างแผนที่",
         },
       },
-      invoiceReceipt: {
-        metaTitle: "Invoice & e-Receipt",
-        title: "Invoice & e-Receipt",
-        heroSubtitle:
-          "ใบแจ้งหนี้และใบเสร็จดิจิทัล—เพื่อความเร็ว ความน่าเชื่อถือ และความสอดคล้องตามข้อกำหนด",
-        painTitle: "ปัญหาที่พบบ่อย",
-        painItems: [
-          "เอกสารที่ต้องเซ็นมีจำนวนมาก",
-          "บางครั้งต้องเข้าบริษัทเพื่อเซ็นเอกสารเพียง 1 ฉบับ",
-          "เวลาที่ใช้ในการเซ็นกลายเป็นภาระของงาน",
-          "เหนื่อย/ล้าจากการเซ็นเอกสาร",
-          "ยุ่งยากมากเพราะต้องเซ็นหลายฉบับ",
-        ],
-        solutionTitle: "บริการสนับสนุน Invoice & e-Receipt แบบครบวงจร",
-        solutionDesc:
-          "Japan System สนับสนุน Invoice & e-Receipt ซึ่งเป็นหนึ่งใน 9 มาตรการ DX ที่กรมสรรพากรไทยผลักดัน",
-        blocks: {
-          eTax: {
-            title: "e‑Tax Invoice & e‑Receipt คืออะไร",
-            desc: "ออกเอกสาร/จัดเก็บ/ค้นหาใบกำกับและใบเสร็จแบบดิจิทัล ลดกระดาษ เพิ่มความเร็ว และพร้อมตรวจสอบย้อนหลัง",
-          },
-          signature: {
-            title: "Digital Signature คืออะไร",
-            desc: "การลงนามที่ปลอดภัย ตรวจสอบตัวตนและความถูกต้องของเอกสาร ช่วยอนุมัติจากระยะไกลและลดความเสี่ยง",
-          },
-        },
-        compareTitle: "ตัวอย่างการลดต้นทุนเมื่อใช้ E‑TAX",
-        compareSubtitle: "กระบวนการเดิม เทียบกับ เมื่อใช้ Japan System e‑Tax",
-        metrics: [
-          { k: "ประหยัดเวลา", current: 25, withSystem: 75 },
-          { k: "ลดต้นทุนกระดาษ", current: 15, withSystem: 70 },
-          { k: "เพิ่มความปลอดภัย", current: 35, withSystem: 85 },
-        ],
-        cta: { primary: "ติดต่อเรา", secondary: "ดูรายละเอียด e‑Tax" },
-        heroChip: "ความเป็นมืออาชีพ",
-        painItemSub: "ลดความยุ่งยากด้วย Workflow ดิจิทัลและการลงนามที่ปลอดภัย",
-        currentProcess: "กระบวนการปัจจุบัน",
-        withJapanSystem: "เมื่อใช้ Japan System e‑Tax",
-        currentLabel: "ปัจจุบัน",
-        withSystemLabel: "เมื่อใช้ Japan System",
-        solutionChipA: "Workflow ไร้กระดาษ",
-        solutionChipB: "จัดเก็บพร้อมตรวจสอบ",
-        sigChipA: "อนุมัติจากระยะไกล",
-        sigChipB: "ป้องกันการปลอมแปลง",
-        trustTitle: "ออกแบบเพื่อความน่าเชื่อถือ",
-        trustDesc: "เส้นแบ่งบาง สถาปัตยกรรมข้อมูลชัดเจน และท่าทีระดับองค์กร—ออกแบบให้รู้สึกสงบ พรีเมียม และเชื่อถือได้",
-        ctaTitle: "พร้อมที่จะปรับปรุงกระบวนการอนุมัติหรือยัง?",
-        ctaDesc: "เริ่มต้นด้วยโครงการนำร่อง—แล้วขยายอย่างมั่นใจ",
-        solutionIllustration: "ภาพประกอบโซลูชัน",
-      },
+
 
     },
     footer: {
@@ -737,7 +486,7 @@ export const translations = {
       newRelease: "新製品",
       itSystem: "ITシステム",
       eTax: "e-Tax Invoice & e-Receipt",
-      invoiceReceipt: "Invoice / e-Receipt",
+
       marketing: "マーケティング",
       myLogStar: "My Log Star",
       company: "会社概要",
@@ -759,12 +508,12 @@ export const translations = {
       home: {
         metaTitle: "モダン禅 IT パートナー",
         hero: {
-          eyebrow: "Modern Japanese Zen",
+
           title: "Japan System では貴社の DX（デジタルトランスフォーメーション）をお手伝いいたします。",
           subtitle:
             "ミニマルで精緻。システム開発、e-Tax、DX/ITマーケティングを一貫して提供します。",
           ctaPrimary: "サービスを見る",
-          ctaSecondary: "会社概要",
+
         },
         services: {
           title: "サービス",
@@ -815,18 +564,7 @@ export const translations = {
         monthlyCostLabel: "月間発行数 1,000 部の場合の月額コスト",
         monthlyCostValue: "39.82 Baht x 1,000 = 39,820 Baht / 月",
         monthlyCostReduction: "月額 39,820 Baht + 人件費削減！",
-        products: [
-          {
-            name: "e-Tax",
-            desc: "課題を整理し、デジタル化でコストと時間を削減します。",
-            href: "/e-tax",
-          },
-          {
-            name: "My Log Star",
-            desc: "コンプライアンスと技術視点を両立したログ管理プラットフォーム。",
-            href: "/my-log-star",
-          },
-        ],
+
       },
       itSystem: {
         metaTitle: "ITシステム",
@@ -849,7 +587,7 @@ export const translations = {
       eTax: {
         metaTitle: "e-Tax Invoice & e-Receipt",
         title: "e-Tax Invoice & e-Receipt",
-        heroSubtitle: "信頼と効率にフォーカスした、クリーンでプロフェッショナルな設計。",
+
         painHeading: "さまざまな書類への手書き署名に時間を浪費していませんか？",
         painTitle: "よくある課題",
         painItems: [
@@ -889,73 +627,24 @@ export const translations = {
         costMonthlyValue: "39.82 Baht × 1,000 = 39,820 Baht / 月",
         costMonthlyReduction: "月額 39,820 Baht + 人件費削減！",
         contactBtn: "お問い合わせ",
-        solutionTitle: "e‑Tax とデジタル署名を包括的にサポート",
-        solutionDesc:
-          "Japan Systemは、タイ歳入局が推進する9つのDX施策の一つである e‑Tax Invoice & e‑Receipt を支援します。",
-        blocks: {
-          eTax: {
-            title: "e‑Tax Invoice & e‑Receipt とは",
-            desc: "請求書・領収書の発行、保管、検索をデジタル化し、紙コスト削減と業務スピード、監査対応力を向上します。",
-          },
-          signature: {
-            title: "デジタル署名とは",
-            desc: "本人性の確認と改ざん防止を実現する安全な署名方式。リモート承認を可能にし、リスクを低減します。",
-          },
-        },
-        compareTitle: "E‑TAX 導入によるコスト削減例",
-        compareSubtitle: "現状のプロセス vs Japan System e‑Tax",
-        metrics: [
-          { k: "時間短縮", current: 25, withSystem: 75 },
-          { k: "紙コスト削減", current: 15, withSystem: 70 },
-          { k: "セキュリティ強化", current: 35, withSystem: 85 },
-        ],
-        cta: { primary: "お問い合わせ", secondary: "e‑Tax 詳細へ" },
-        detailsTitle: "e-Tax 詳細",
-        detailsSubtitle: "課題から変革までを、論理的に可視化。",
-        detailsProblemTitle: "課題（Pain Points）",
-        detailsProblemItems: [
-          "手作業による書類処理とミス",
-          "承認が遅く、データが分散",
-          "記録の不整合によるコンプライアンスリスク",
-        ],
-        detailsSolutionTitle: "デジタルトランスフォーメーション",
-        detailsSolutionItems: [
-          "電子ワークフローを一気通貫で",
-          "検索可能で監査対応の集中管理",
-          "自動化によりコストと時間を削減",
-        ],
-        detailsImpactTitle: "コスト削減インパクト",
-        detailsImpactItems: [
-          { label: "処理時間", value: "-40%" },
-          { label: "手作業ミス", value: "-60%" },
-          { label: "運用コスト", value: "-25%" },
-        ],
+
       },
       marketing: {
         metaTitle: "DX / ITマーケティング",
         title: "マーケティング",
-        subtitle: "DXとITマーケティングを、モダンなMasonryで。",
+
         heroTitle: "ウェブサイトとオンラインマーケティング",
         cardWebsite: "ウェブサイト",
         cardOnlineMarketing: "オンラインマーケティング",
-        cards: [
-          { title: "DX Strategy", tag: "Consulting" },
-          { title: "MarTech Stack", tag: "Implementation" },
-          { title: "Content Systems", tag: "Automation" },
-          { title: "Performance Ads", tag: "Growth" },
-          { title: "SEO & Technical", tag: "Engineering" },
-          { title: "Analytics & BI", tag: "Insights" },
-          { title: "CRM Journeys", tag: "Lifecycle" },
-          { title: "Brand + Product", tag: "Creative" },
-        ],
+
       },
       myLogStar: {
         metaTitle: "My Log Star 詳細",
         title: "My Log Star",
-        subtitle: "企業向けログ管理を、技術的にわかりやすく。",
+
         heroTitle: "My log star",
         heroDesc: "ログ管理とは？パソコンを使用すると、使用したソフトウェアや開いたファイルなどの情報がコンピュータに記録されます...（ログ）には多くの情報が含まれており、詳しく調べると誰がいつ何をしていたかがわかります。",
-        videoTitle: "プロダクト概要 (16:9)",
+
         featureTitle: "MylogStarの特長",
         featureLogCollectionTitle: "ログ収集力",
         featureLogCollectionDesc: "OSのカーネルレベルでログを取得し、他のログ管理製品では取得できない操作を把握します。",
@@ -967,21 +656,7 @@ export const translations = {
           { id: "standalone", title: "My log Star FileServer", content: "重要なサーバーをピンポイントで監視 低価格＆高機能！ファイルサーバーアクセスログ/監査ログ管理\n\nログ監視は情報漏えい対策に不可欠です。しかし、膨大な数のサーバーを所有する企業やシステム管理に多くのリソースを割けない中小企業にとって、すべてのシステムに導入するのは困難です。MylogStar FileServerは、機密情報が保存されているファイルサーバーに監視対象を絞り、監視対象のサーバーに直接インストールすることで、ファイルサーバー内のデータの入出力やユーザー操作を監視します。セキュリティを維持するファイルサーバーアクセスログ管理ソフトウェアです。MylogStar FileServerの導入により、監査ログの取得も可能になります。監査ログは、システム管理者やユーザーが行った操作の記録です。サーバー内の操作内容は、時系列で継続的に監査ログとして記録されます（いつ、誰が、何をした）。別途管理サーバーを準備する必要はなく、PCにエージェントをインストールする必要もないため、ログ管理が簡単かつ安価に行えます。", images: 1 },
           { id: "console", title: "My log star", content: "My log Star Desktop — スタンドアロンPCや小規模拠点ですぐにできる「ログ管理」と「デバイス制御」\nMylogStar Desktopは、ネットワークに接続できないPCや小規模拠点など、対象PCが少数の環境に最適なログ管理・デバイス制御ソフトウェアです。管理サーバーは不要で、対象PCにインストールするだけで簡単に導入できます。業界トップクラスのログ収集力で、対象PC内の操作ログを根こそぎ取得し、証跡として管理できます。さらに、デバイス制御機能により機密データの持ち出しを制御します。\n\nログ管理\nMylogStar Desktop — 業界トップクラスのログ収集力で、対象PC内の操作ログを根こそぎ取得し、証跡として保管できます。スタンドアロンPCやモバイルPCからの漏えいで最も心配なのは、リムーバブルディスクです。MylogStar Desktopは、リムーバブルディスクを含む、ローカルディスク、ネットワークドライブなどで行われたすべてのファイル操作を記録します。また、追跡機能も備えているため、不正操作による隠蔽が行われても即座に特定できます。スクリーンスナップショット機能により、指定したイベント発生時の画面をキャプチャすることもできます。\n\nMylogStar 4 Standalone Manager\nMylogStar 4 Standalone Managerは、MylogStar 4 — Desktopがインストールされた複数のマシンのログを一元的に収集、管理、閲覧できます。さらに、MylogStar 4 Standalone はアラート機能やレポート機能を含み、Managerを使用することで強化できる機能や操作もあります。\n\n※ Standalone Managerの利用にはSQL Serverが必要です。\n※ MylogStar 4 Standalone Managerの英語版は開発予定の製品です。提供開始時期が決まり次第お知らせいたします。\n\nわかりやすくシンプルな管理コンソール\nMylogStar Desktopの管理コンソールは、ITに詳しくない担当者でも簡単にログを確認できるよう、シンプルでわかりやすい管理コンソールです。\n\nデバイス制御\nMylogStar DesktopのAccess Control Optionは、USBデバイスの使用を一律に禁止するだけでなく、USBストレージ使用時に許可・禁止・読み取り専用などの詳細なセキュリティポリシーを設定できます。さらに、「USBホワイトリスト」機能を使用することで、USBストレージに付与されたベンダーID、プロダクトID、シリアル番号に基づいて、特定のUSBストレージのみに使用許可を与えることが可能です。これにより、業務効率を損なうことなく、USBストレージの利便性を活かしながらセキュリティを強化することができます。", images: 1 }
         ],
-        chips: ["SIEM連携", "監査ログ", "保持ポリシー", "権限制御"],
-        details: [
-          {
-            title: "建築",
-            desc: "取り込みパイプラインと構造化インデックスを前提に、境界を守る設計。",
-          },
-          {
-            title: "コンプライアンス",
-            desc: "保持・不変性・エクスポートなど、実運用の監査要件を想定。",
-          },
-          {
-            title: "パフォーマンス",
-            desc: "インシデント対応とレポート作成を高速化するクエリ/ダッシュボード。",
-          },
-        ],
+
       },
       company: {
         metaTitle: "会社概要",
@@ -1025,62 +700,11 @@ export const translations = {
         },
         office: {
           title: "オフィス",
-          lines: ["バンコク（アソーク）", "平日 09:00–18:00"],
           email: "info@jpsys-th.com",
           phone: "02-664-1674",
-          map: "マップ（プレースホルダー）",
         },
       },
-      invoiceReceipt: {
-        metaTitle: "Invoice & e-Receipt",
-        title: "Invoice & e-Receipt",
-        heroSubtitle:
-          "信頼と効率にフォーカスした、デジタル請求書・領収書ソリューション。",
-        painTitle: "よくある課題",
-        painItems: [
-          "署名する書類が多すぎる",
-          "1枚のために出社しなければならないことがある",
-          "署名の時間が業務負担になっている",
-          "署名作業に疲れてしまう",
-          "大量に署名が必要でとても面倒",
-        ],
-        solutionTitle: "Invoice & e-Receipt を包括的にサポート",
-        solutionDesc:
-          "Japan Systemは、タイ歳入局が推進する9つのDX施策の一つである Invoice & e-Receipt を支援します。",
-        blocks: {
-          eTax: {
-            title: "e‑Tax Invoice & e‑Receipt とは",
-            desc: "請求書・領収書の発行、保管、検索をデジタル化し、紙コスト削減と業務スピード、監査対応力を向上します。",
-          },
-          signature: {
-            title: "デジタル署名とは",
-            desc: "本人性の確認と改ざん防止を実現する安全な署名方式。リモート承認を可能にし、リスクを低減します。",
-          },
-        },
-        compareTitle: "E‑TAX 導入によるコスト削減例",
-        compareSubtitle: "現状のプロセス vs Japan System e‑Tax",
-        metrics: [
-          { k: "時間短縮", current: 25, withSystem: 75 },
-          { k: "紙コスト削減", current: 15, withSystem: 70 },
-          { k: "セキュリティ強化", current: 35, withSystem: 85 },
-        ],
-        cta: { primary: "お問い合わせ", secondary: "e‑Tax 詳細へ" },
-        heroChip: "クリーンな専門性",
-        painItemSub: "デジタルワークフローと安全な署名で摩擦を軽減。",
-        currentProcess: "現状のプロセス",
-        withJapanSystem: "Japan System e‑Tax 導入後",
-        currentLabel: "現状",
-        withSystemLabel: "Japan System 導入後",
-        solutionChipA: "ペーパーレスワークフロー",
-        solutionChipB: "監査対応ストレージ",
-        sigChipA: "リモート承認",
-        sigChipB: "改ざん防止",
-        trustTitle: "設計による信頼性",
-        trustDesc: "薄い区切り線、明確な情報設計、企業レベルの品質—落ち着きとプレミアム感、信頼性を感じる設計。",
-        ctaTitle: "承認プロセスを近代化しませんか？",
-        ctaDesc: "クリーンなパイロットから始めて、自信を持ってスケールアップ。",
-        solutionIllustration: "ソリューション図解",
-      },
+
     },
     footer: {
       companyProfile: "会社概要",

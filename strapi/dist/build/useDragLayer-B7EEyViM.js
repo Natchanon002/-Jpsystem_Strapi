@@ -1,0 +1,1 @@
+import{hN as s,ht as c,gI as t}from"./strapi-nkxAZ_gM.js";function u(o){const e=s().getMonitor(),[a,r]=c(e,o);return t.useEffect(()=>e.subscribeToOffsetChange(r)),t.useEffect(()=>e.subscribeToStateChange(r)),a}export{u};

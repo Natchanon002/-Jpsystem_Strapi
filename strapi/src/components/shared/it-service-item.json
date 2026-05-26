@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_it_service_items",
+  "info": {
+    "displayName": "ItServiceItem",
+    "icon": "server",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "image": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] }
+  }
+}

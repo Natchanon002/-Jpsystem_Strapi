@@ -1,0 +1,13 @@
+{
+    "collectionName": "components_shared_it_feature_items",
+    "info": {
+        "displayName": "ItFeatureItem",
+        "icon": "star",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": { "type": "string" },
+        "desc": { "type": "text" }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_accordion_items",
+  "info": {
+    "displayName": "AccordionItem",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": { "type": "string" },
+    "title": { "type": "string" },
+    "content": { "type": "richtext" },
+    "image": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] }
+  }
+}

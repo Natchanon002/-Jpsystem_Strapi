@@ -1,0 +1,13 @@
+{
+    "collectionName": "components_shared_benefit_items",
+    "info": {
+        "displayName": "BenefitItem",
+        "icon": "check",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "text": { "type": "text" },
+        "icon": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] }
+    }
+}

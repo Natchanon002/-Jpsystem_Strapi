@@ -12,12 +12,20 @@ const nextConfig: NextConfig = {
     // Aggressive quality — visually identical at 75 but much smaller files
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days cache
 
-    // Allow Vercel Blob + Sanity CDN images
+    // Configured qualities to support optimized custom quality sizes
+    qualities: [30, 50, 60, 65, 75],
+
+    // Allow Vercel Blob + Sanity CDN + Local Strapi images
     remotePatterns: [
       { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
       { protocol: "https", hostname: "*.blob.vercel-storage.com" },
       { protocol: "https", hostname: "cdn.sanity.io" },
+      { protocol: "http", hostname: "localhost" },
+      { protocol: "http", hostname: "127.0.0.1" },
+      { protocol: "https", hostname: "*.media.strapiapp.com" },
     ],
+    // Allow Next.js to fetch from localhost (avoids upstream image resolved to private ip)
+    dangerouslyAllowSVG: true,
   },
 
   // Enable gzip/brotli compression headers

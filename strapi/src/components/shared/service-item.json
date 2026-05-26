@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_service_items",
+  "info": {
+    "displayName": "ServiceItem",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "desc": { "type": "text" },
+    "url": { "type": "string" },
+    "icon": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] }
+  }
+}

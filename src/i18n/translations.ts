@@ -20,6 +20,7 @@ export const translations = {
 
       marketing: "Marketing",
       myLogStar: "My Log Star",
+      blog: "Blog",
       company: "Company",
       contact: "Contact",
     },
@@ -235,6 +236,18 @@ export const translations = {
           phone: "02-664-1674",
         },
       },
+      blog: {
+        metaTitle: "Blog & News",
+        title: "Blog & News",
+        subtitle: "News, articles and updates from Japan System Thailand",
+        featured: "Featured",
+        readMore: "Read article",
+        backToBlog: "Back to Blog",
+        allPosts: "All posts",
+        noPosts: "No posts yet",
+        latestUpdates: "Latest updates",
+        contactUs: "Contact us",
+      },
 
 
     },
@@ -254,6 +267,7 @@ export const translations = {
 
       marketing: "การตลาด",
       myLogStar: "My Log Star",
+      blog: "บล็อก",
       company: "ข้อมูลบริษัท",
       contact: "ติดต่อเรา",
     },
@@ -489,6 +503,7 @@ export const translations = {
 
       marketing: "マーケティング",
       myLogStar: "My Log Star",
+      blog: "ブログ",
       company: "会社概要",
       contact: "お問い合わせ",
     },

@@ -1,0 +1,12 @@
+{
+    "collectionName": "components_shared_pain_items",
+    "info": {
+        "displayName": "PainItem",
+        "icon": "exclamation",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "text": { "type": "text" }
+    }
+}

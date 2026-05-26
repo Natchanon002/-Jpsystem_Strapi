@@ -1,0 +1,13 @@
+{
+    "collectionName": "components_shared_cost_items",
+    "info": {
+        "displayName": "CostItem",
+        "icon": "dollar-sign",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "label": { "type": "string" },
+        "price": { "type": "string" }
+    }
+}

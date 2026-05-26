@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_news_cards",
+  "info": {
+    "displayName": "NewsCard",
+    "icon": "newspaper",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "category": { "type": "string" },
+    "date": { "type": "string" },
+    "url": { "type": "string" },
+    "image": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] }
+  }
+}
